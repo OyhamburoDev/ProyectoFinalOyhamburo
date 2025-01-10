@@ -1,0 +1,29 @@
+.buttonPass-right {
+  width: 2rem; /* Tamaño más compacto para el botón */
+  height: 2rem;
+  border-radius: 50%; /* Forma circular */
+  padding: 0.3rem;
+  background-color: white; /* Fondo blanco */
+  border: 1px solid #c7b9a5; /* Borde sutil */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Animación suave */
+}
+
+.buttonPass-right:hover {
+  background-color: #333333; /* Fondo negro al pasar el ratón */
+  border-color: #333333; /* Borde oscuro en hover */
+  transform: scale(1.05); /* Efecto de zoom */
+}
+
+.buttonPass-right svg {
+  width: 1.2rem; /* Tamaño ajustado del ícono */
+  height: 1.2rem;
+  stroke: #000000; /* Color del ícono */
+}
+
+.buttonPass-right:hover svg {
+  stroke: white; /* Cambiar color del ícono a blanco cuando se pase el ratón */
+}

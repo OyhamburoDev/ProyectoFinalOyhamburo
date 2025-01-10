@@ -1,0 +1,183 @@
+.container-footer {
+  height: 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 0rem;
+}
+
+.footer-container-uno {
+  width: 30rem;
+}
+
+.footer-title-uno {
+  text-align: left; /* Aquí alineamos el texto al inicio */
+  margin-left: 2rem;
+  font-size: 0.8rem;
+}
+
+.footer-container-input {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+/* container para el input y el label, div uno */
+
+.input-uno {
+  width: 80%;
+  padding: 4px 8px; /* Espaciado interno para hacerlo más cómodo */
+  font-size: 0.8rem; /* Tamaño del texto */
+  border: 2px solid #ccc; /* Borde fino y neutral */
+  border-radius: 25px; /* Esquinas redondeadas */
+  outline: none; /* Elimina el contorno azul predeterminado al enfocarse */
+  background-color: #f9f9f9; /* Fondo sutil */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para darle profundidad */
+  transition: all 0.3s ease; /* Animación suave en los cambios */
+}
+
+/* Placeholder estilizado */
+.footer-container-input input::placeholder {
+  color: #aaa; /* Color del placeholder */
+  font-style: italic; /* Estilo en cursiva para diferenciarlo */
+}
+
+.footer-container-input label {
+  font-size: 0.5rem;
+}
+
+.footer-checkbox-label {
+  display: flex;
+  align-items: center; /* Alinea el input y el texto al centro verticalmente */
+  gap: 0.5rem; /* Espaciado entre el checkbox y el label */
+  margin-top: 1rem;
+}
+
+.footer-container-icons-uno {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  gap: 0.5rem;
+}
+
+.footer-icon-uno {
+  width: 2rem;
+  height: 2rem;
+}
+
+.footer-container-dos {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer-container-dos h3 {
+  width: 30rem;
+  display: inline-block; /* Permite ajustar el contenido */
+  text-align: left; /* Aquí alineamos el texto al inicio */
+  width: 200px; /* Define un ancho fijo para los enlaces */
+  text-decoration: none; /* Elimina el subrayado */
+  color: white; /* Color del texto */
+  margin-bottom: 0px;
+  font-size: 0.8rem;
+}
+
+.footer-icon {
+  color: rgb(255, 255, 255);
+  width: 1rem;
+  height: 1rem;
+}
+
+.footer-navbar {
+  list-style-type: none;
+  padding: 0; /* Elimina el padding predeterminado de la lista */
+  text-align: center; /* Centra el contenido de la lista */
+}
+
+.footer-navbar li {
+  margin-bottom: 10px; /* Espaciado entre los elementos de la lista */
+  margin-bottom: 0.1rem;
+}
+
+.footer-navbar li a {
+  display: inline-block; /* Permite ajustar el contenido */
+  text-align: left; /* Aquí alineamos el texto al inicio */
+  width: 200px; /* Define un ancho fijo para los enlaces */
+  text-decoration: none; /* Elimina el subrayado */
+  color: white; /* Color del texto */
+  font-size: 0.6rem;
+}
+
+.footer-container-tres {
+  width: 26rem;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.footer-container-tres h3 {
+  width: 30rem;
+  display: inline-block; /* Permite ajustar el contenido */
+  text-align: left; /* Aquí alineamos el texto al inicio */
+  width: 200px; /* Define un ancho fijo para los enlaces */
+  text-decoration: none; /* Elimina el subrayado */
+  color: white; /* Color del texto */
+  margin-bottom: 0px;
+  font-size: 0.8rem;
+}
+
+.footer-iconos {
+  background-color: #333;
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-icon-bank {
+  margin-left: 2rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.footer-container-icon {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.footer-btn-container {
+  margin-right: 2rem;
+}
+.button-footer {
+  background-color: #f1f1f1; /* Fondo gris claro */
+  color: #333; /* Texto en gris oscuro */
+  font-size: 0.7rem; /* Tamaño de fuente */
+  font-weight: 500; /* Peso de fuente moderado */
+  padding: 0.3rem 0.8rem; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde sutil gris claro */
+  border-radius: 25px; /* Bordes redondeados elegantes */
+  cursor: pointer; /* Cursor tipo mano al pasar por encima */
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease; /* Animación suave */
+}
+
+/* Efectos al pasar el cursor */
+.button-footer:hover {
+  background-color: #e0e0e0; /* Fondo más oscuro al pasar el cursor */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil al pasar */
+}
+
+/* Efectos al hacer clic */
+.button-footer:active {
+  background-color: #d4d4d4; /* Fondo más oscuro al hacer clic */
+  transform: scale(0.98); /* Ligera reducción al hacer clic */
+}

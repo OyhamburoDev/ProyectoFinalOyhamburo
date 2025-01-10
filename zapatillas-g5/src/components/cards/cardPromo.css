@@ -1,0 +1,31 @@
+.cardPromo {
+  width: 22rem;
+  height: 20rem;
+  background-color: #ffffff;
+  margin-left: 0.5rem;
+  border-radius: 1rem;
+  margin-right: 0.5rem;
+
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.cardPromo-button {
+  background-color: #e38035;
+  border-radius: 10rem;
+  color: white;
+  border: none; /* Elimina el borde predeterminado */
+  padding: 8px 18px; /* Añade espacio interno */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  font-size: 16px; /* Ajusta el tamaño de la fuente */
+  transition: background-color 0.3s ease; /* Animación suave */
+  display: flex;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+/* Estilo para hover */
+.cardPromo-button:hover {
+  background-color: #e09962; /* Color más claro al pasar el cursor */
+}

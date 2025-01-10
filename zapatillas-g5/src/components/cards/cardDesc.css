@@ -1,0 +1,38 @@
+.cardDesc {
+  width: 36rem;
+  height: 20rem;
+  border-radius: 1rem;
+  margin-left: 0.5rem;
+}
+
+.cardDesc-content {
+  display: flex;
+  flex-direction: column; /* Alinea los elementos en columna (uno debajo del otro) */
+  align-items: flex-start; /* Alinea los elementos al inicio (desde el margen izquierdo) */
+  gap: 0rem; /* Espaciado entre los elementos */
+  margin-left: 1rem; /* Espaciado desde el margen izquierdo */
+  margin-top: 8.3rem;
+}
+
+.cardDesc-title {
+  margin-bottom: 0px;
+}
+
+.cardDesc-price {
+  margin-top: 0px;
+}
+
+.cardDesc-button {
+  background-color: #e38035;
+  border-radius: 10rem;
+  color: white;
+  border: none; /* Elimina el borde predeterminado */
+  padding: 8px 18px; /* Añade espacio interno */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  font-size: 16px; /* Ajusta el tamaño de la fuente */
+  transition: background-color 0.3s ease; /* Animación suave */
+}
+/* Estilo para hover */
+.cardDesc-button:hover {
+  background-color: #e09962; /* Color más claro al pasar el cursor */
+}

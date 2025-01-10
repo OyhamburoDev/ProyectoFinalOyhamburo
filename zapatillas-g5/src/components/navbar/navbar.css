@@ -1,0 +1,87 @@
+.container-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  background-color: #000000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container-navbar-title {
+  display: flex;
+}
+
+.navbar-title {
+  font-size: 1.3rem;
+  margin-left: 2rem;
+  color: white;
+}
+.navbar-crown {
+  font-size: 1rem; /* Cambia este valor para ajustar el tamaño */
+  vertical-align: middle; /* Opcional: centra verticalmente con el texto */
+  color: #e38035; /* Opcional: cambia el color del ícono */
+}
+.navbar-subtitle {
+  font-size: 0.5rem;
+  color: #e38035;
+  margin-bottom: 0px;
+}
+
+.container-navbar-list {
+  display: flex;
+}
+.navbar-list {
+  display: flex;
+  font-size: 0.8rem;
+  gap: 1rem;
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.navbar-list li a {
+  text-decoration: none;
+  color: white;
+}
+
+.container-navbar-icons {
+  display: flex;
+  gap: 1rem;
+  margin-right: 2rem;
+  color: white;
+}
+
+.icon-buscar {
+  width: 1rem;
+  height: 1rem;
+}
+
+.icon-like {
+  width: 1rem;
+  height: 1rem;
+}
+
+.icon-carrito {
+  position: relative;
+  display: inline-flex;
+  width: 1rem;
+  height: 1rem;
+}
+.badge-icon .MuiBadge-badge {
+  top: -1px; /* Ajusta la posición vertical */
+  right: -1px; /* Ajusta la posición horizontal */
+  min-width: 0.8rem; /* Ancho mínimo del badge */
+  height: 0.8rem; /* Altura del badge */
+  border-radius: 50%; /* Lo hace redondo */
+  font-size: 0.5rem; /* Tamaño de la fuente dentro del badge */
+  padding: 0; /* Elimina cualquier relleno adicional */
+  display: flex; /* Usamos flexbox para centrar el número */
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+}
+
+.icon-usuario {
+  width: 1rem;
+  height: 1rem;
+}

@@ -1,0 +1,39 @@
+.cardRelleno {
+  width: 16rem;
+  height: 11rem;
+  background-color: #ffffff;
+  margin-left: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardRelleno-title {
+  margin: 0px;
+  font-size: 0.5rem;
+  margin-top: 0px;
+  padding: 0px;
+}
+
+.cardRelleno-price {
+  margin: 0px;
+  font-size: 0.8rem;
+}
+
+.cardRelleno-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 14rem;
+}
+
+.cardRelleno-container h3 {
+  margin-bottom: 0rem;
+  margin-top: 1rem;
+}
+
+.cardRelleno-container p {
+  margin-bottom: 0rem;
+  margin-top: 0px;
+}
