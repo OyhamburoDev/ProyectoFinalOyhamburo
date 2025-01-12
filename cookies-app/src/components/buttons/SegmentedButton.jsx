@@ -30,7 +30,7 @@ export default function SegmentedButton() {
           borderRadius: "25px", // Bordes redondeados
           fontSize: "0.7rem",
           fontWeight: 500,
-          padding: "0.2rem 0.6rem",
+          padding: "0.1rem 0.6rem",
           transition:
             "background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease", // Animación
           textTransform: "none",
@@ -47,7 +47,7 @@ export default function SegmentedButton() {
           borderRadius: "25px", // Bordes redondeados
           fontSize: "0.7rem",
           fontWeight: 500,
-          padding: "0.2rem 0.6rem",
+          padding: "0.1rem 0.6rem",
           transition:
             "background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease", // Animación
           textTransform: "none",

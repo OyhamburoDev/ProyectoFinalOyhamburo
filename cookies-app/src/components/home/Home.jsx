@@ -30,6 +30,9 @@ import "slick-carousel/slick/slick-theme.css";
 import Carousel from "../carousel/Carousel.jsx";
 import SegmentedButton from "../buttons/SegmentedButton.jsx";
 
+// importacion re react-router link
+import { Link } from "react-router-dom";
+
 // Componente principal Home
 function Home() {
   // useState para levantar las cards de Cookies Premium
@@ -72,36 +75,51 @@ function Home() {
           </div>
         </div>
         <div className="container-cards">
-          <Card
-            className={`card-effect ${cardActiva === 1 ? "card-active" : ""}`}
-            title="Cookie MYM"
-            price="29.99"
-            image={fotoCard}
-          />
-          <Card
-            className={`card-effect ${cardActiva === 2 ? "card-active" : ""}`}
-            title="Cookie Lemon Pie"
-            price="29.99"
-            image={fotoCardDos}
-          />
-          <Card
-            className={`card-effect ${cardActiva === 3 ? "card-active" : ""}`}
-            title="Cookie Mega Chocolate"
-            price="29.99"
-            image={fotoCardTres}
-          />
-          <Card
-            className={`card-effect ${cardActiva === 4 ? "card-active" : ""}`}
-            title="Cookie Kinder"
-            price="29.99"
-            image={fotoCardCuatro}
-          />
-          <Card
-            className={`card-effect ${cardActiva === 5 ? "card-active" : ""}`}
-            title="Cookie Mega Oreo"
-            price="29.99"
-            image={fotoCardSiete}
-          />
+          <Link to="/product/1" className="card-link">
+            <Card
+              className={`card-effect ${cardActiva === 1 ? "card-active" : ""}`}
+              title="Cookie MYM"
+              price="29.99"
+              image={fotoCard}
+              id={1}
+            />
+          </Link>
+          <Link to="/product/2" className="card-link">
+            <Card
+              className={`card-effect ${cardActiva === 2 ? "card-active" : ""}`}
+              title="Cookie Lemon Pie"
+              price="29.99"
+              image={fotoCardDos}
+              id={2}
+            />
+          </Link>
+          <Link to="/product/3" className="card-link">
+            <Card
+              className={`card-effect ${cardActiva === 3 ? "card-active" : ""}`}
+              title="Cookie Mega Chocolate"
+              price="29.99"
+              image={fotoCardTres}
+              id={3}
+            />
+          </Link>
+          <Link to="/product/4" className="card-link">
+            <Card
+              className={`card-effect ${cardActiva === 4 ? "card-active" : ""}`}
+              title="Cookie Kinder"
+              price="29.99"
+              image={fotoCardCuatro}
+              id={4}
+            />
+          </Link>
+          <Link to="/product/5" className="card-link">
+            <Card
+              className={`card-effect ${cardActiva === 5 ? "card-active" : ""}`}
+              title="Cookie Mega Oreo"
+              price="29.99"
+              image={fotoCardSiete}
+              id={5}
+            />
+          </Link>
         </div>
       </div>
       {/* Seccion para el carousel */}

@@ -111,6 +111,7 @@ function Carousel() {
         id="popular"
         style={{
           width: "41rem",
+          paddingTop: "1rem",
         }}
       >
         <div className="carousel-h2-p">

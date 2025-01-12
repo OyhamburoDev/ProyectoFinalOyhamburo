@@ -3,7 +3,7 @@
   padding-top: 1rem;
 }
 .container-premium {
-  margin-top: 2rem;
+  padding-top: 2rem;
 }
 
 .containerPremiun-title-button {
@@ -50,7 +50,7 @@
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta el sombreado para efecto 3D */
 }
 .container-clasicos {
-  margin-top: 5rem;
+  padding-top: 3rem;
 }
 
 .clasic-ctn-title {
@@ -201,8 +201,8 @@
 }
 
 .clasicos-button {
-  background-color: #f1f1f1; /* Fondo gris claro */
-  color: #333; /* Texto en gris oscuro */
+  background-color: white !important; /* Fondo gris claro */
+  color: #161616; /* Texto en gris oscuro */
   font-size: 0.7rem; /* Tamaño de fuente */
   font-weight: 500; /* Peso de fuente moderado */
   padding: 0.3rem 0.8rem; /* Espaciado interno */
@@ -215,13 +215,13 @@
 
 /* Efectos al pasar el cursor */
 .clasicos-button:hover {
-  background-color: #e0e0e0; /* Fondo más oscuro al pasar el cursor */
+  background-color: #ffffff; /* Fondo más oscuro al pasar el cursor */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil al pasar */
 }
 
 /* Efectos al hacer clic */
 .clasicos-button:active {
-  background-color: #d4d4d4; /* Fondo más oscuro al hacer clic */
+  background-color: #ffffff; /* Fondo más oscuro al hacer clic */
   transform: scale(0.98); /* Ligera reducción al hacer clic */
 }
 
