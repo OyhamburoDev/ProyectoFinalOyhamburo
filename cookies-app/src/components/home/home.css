@@ -1,7 +1,10 @@
 .container-desc-promo {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   padding-top: 1rem;
 }
+
 .container-premium {
   padding-top: 2rem;
 }
@@ -23,7 +26,7 @@
   justify-content: left;
   margin-top: 2rem;
   margin-left: 7rem;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 
@@ -48,27 +51,6 @@
 .card-active {
   transform: translateY(-10px); /* Mueve la card hacia arriba */
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta el sombreado para efecto 3D */
-}
-.container-clasicos {
-  padding-top: 3rem;
-}
-
-.clasic-ctn-title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.clasicos-title {
-  margin-left: 6rem;
-  font-size: 1.3rem;
-}
-
-.container-cardsClassic {
-  display: flex;
-  flex-direction: row;
-  align-items: start;
-  justify-content: center;
 }
 
 .buttonPass-right {
@@ -200,8 +182,27 @@
   border-color: #333333; /* Bordes oscuros */
 }
 
+/* Aqui comienzan las cards clasicas */
+.container-clasicos {
+  padding-top: 3rem;
+}
+
+.clasic-ctn-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-cardsClassic {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+}
+
 .clasicos-button {
-  background-color: white !important; /* Fondo gris claro */
+  background-color: white !important;
   color: #161616; /* Texto en gris oscuro */
   font-size: 0.7rem; /* Tamaño de fuente */
   font-weight: 500; /* Peso de fuente moderado */
@@ -234,7 +235,7 @@
 }
 
 .clasicos-title {
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-left: 0px;
 }
@@ -243,5 +244,5 @@
   color: #4a4a4a; /* Cambia el color del enlace */
   color: #000;
 
-  font-size: 0.8rem;
+  font-size: 1rem;
 }

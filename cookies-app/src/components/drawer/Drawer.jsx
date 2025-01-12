@@ -15,7 +15,7 @@ import "../drawer/drawer.css";
 export default function AnchorTemporaryDrawer({ state, toggleDrawer }) {
   const list = () => (
     <Box
-      sx={{ width: 275 }}
+      sx={{ width: 400 }}
       role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}

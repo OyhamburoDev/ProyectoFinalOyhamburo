@@ -1,11 +1,11 @@
 .container-footer {
-  height: 10rem;
+  height: 17rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: #333;
   color: #fff;
-  padding: 10px 0;
+  padding: 15px 0;
   text-align: center;
   font-size: 14px;
   margin-top: 0rem;
@@ -13,27 +13,28 @@
 
 .footer-container-uno {
   width: 30rem;
+  padding: 1rem;
 }
 
 .footer-title-uno {
   text-align: left; /* Aquí alineamos el texto al inicio */
   margin-left: 2rem;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 
 .footer-container-input {
   display: flex;
   flex-direction: column;
   margin-left: 2rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 /* container para el input y el label, div uno */
 
 .input-uno {
   width: 80%;
-  padding: 4px 8px; /* Espaciado interno para hacerlo más cómodo */
-  font-size: 0.8rem; /* Tamaño del texto */
+  padding: 5px 9px; /* Espaciado interno para hacerlo más cómodo */
+  font-size: 1rem; /* Tamaño del texto */
   border: 2px solid #ccc; /* Borde fino y neutral */
   border-radius: 25px; /* Esquinas redondeadas */
   outline: none; /* Elimina el contorno azul predeterminado al enfocarse */
@@ -49,14 +50,14 @@
 }
 
 .footer-container-input label {
-  font-size: 0.5rem;
+  font-size: 0.8rem;
 }
 
 .footer-checkbox-label {
   display: flex;
   align-items: center; /* Alinea el input y el texto al centro verticalmente */
-  gap: 0.5rem; /* Espaciado entre el checkbox y el label */
-  margin-top: 1rem;
+  gap: 0.8rem; /* Espaciado entre el checkbox y el label */
+  margin-top: 1.5rem;
 }
 
 .footer-container-icons-uno {
@@ -76,35 +77,33 @@
   width: 30rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  padding: 1rem;
 }
 
 .footer-container-dos h3 {
-  width: 30rem;
-  display: inline-block; /* Permite ajustar el contenido */
-  text-align: left; /* Aquí alineamos el texto al inicio */
-  width: 200px; /* Define un ancho fijo para los enlaces */
   text-decoration: none; /* Elimina el subrayado */
   color: white; /* Color del texto */
-  margin-bottom: 0px;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .footer-icon {
   color: rgb(255, 255, 255);
-  width: 1rem;
-  height: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
+.footer-container-navbar {
+  margin-left: 6rem;
 }
 
 .footer-navbar {
   list-style-type: none;
-  padding: 0; /* Elimina el padding predeterminado de la lista */
+  column-gap: 1rem;
   text-align: center; /* Centra el contenido de la lista */
 }
 
 .footer-navbar li {
-  margin-bottom: 10px; /* Espaciado entre los elementos de la lista */
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.8rem;
 }
 
 .footer-navbar li a {
@@ -113,7 +112,7 @@
   width: 200px; /* Define un ancho fijo para los enlaces */
   text-decoration: none; /* Elimina el subrayado */
   color: white; /* Color del texto */
-  font-size: 0.6rem;
+  font-size: 1rem;
 }
 
 .footer-container-tres {
@@ -121,6 +120,8 @@
   display: flex;
   flex-direction: column;
   align-items: end;
+  padding: 1rem;
+  gap: 1rem;
 }
 
 .footer-container-tres h3 {
@@ -131,20 +132,20 @@
   text-decoration: none; /* Elimina el subrayado */
   color: white; /* Color del texto */
   margin-bottom: 0px;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .footer-iconos {
   background-color: #333;
   width: 100%;
-  height: 2rem;
+  height: 3rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 .footer-icon-bank {
-  margin-left: 2rem;
+  margin-left: 3rem;
   display: flex;
   gap: 0.5rem;
 }
@@ -155,14 +156,14 @@
 }
 
 .footer-btn-container {
-  margin-right: 2rem;
+  margin-right: 3rem;
 }
 .button-footer {
   background-color: #f1f1f1; /* Fondo gris claro */
   color: #333; /* Texto en gris oscuro */
-  font-size: 0.7rem; /* Tamaño de fuente */
+  font-size: 1rem; /* Tamaño de fuente */
   font-weight: 500; /* Peso de fuente moderado */
-  padding: 0.3rem 0.8rem; /* Espaciado interno */
+  padding: 0.4rem 0.9rem; /* Espaciado interno */
   border: 1px solid #ccc; /* Borde sutil gris claro */
   border-radius: 25px; /* Bordes redondeados elegantes */
   cursor: pointer; /* Cursor tipo mano al pasar por encima */
@@ -180,4 +181,9 @@
 .button-footer:active {
   background-color: #d4d4d4; /* Fondo más oscuro al hacer clic */
   transform: scale(0.98); /* Ligera reducción al hacer clic */
+}
+
+.footer-icon-uno {
+  width: 3rem;
+  height: 3rem;
 }

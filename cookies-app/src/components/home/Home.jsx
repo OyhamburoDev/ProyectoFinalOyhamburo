@@ -46,7 +46,7 @@ function Home() {
     <main
       style={{
         backgroundColor: "#fbf4e0", // Estilo en línea para el fondo del componente
-        height: "91rem", // Altura del componente
+        height: "130rem", // Altura del componente
       }}
     >
       {/* Sección de promoción */}

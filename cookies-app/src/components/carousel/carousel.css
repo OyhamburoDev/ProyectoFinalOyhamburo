@@ -5,15 +5,14 @@
   align-items: center;
 }
 .carousel-title {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   margin-bottom: 0px;
   padding: 0px;
-  margin-top: 3rem;
 }
 .carousel-p {
   margin-bottom: 0px;
   padding-bottom: 0px;
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 .slick-slide {
   background-color: #ffffff;
@@ -47,4 +46,5 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding-top: 3rem;
 }

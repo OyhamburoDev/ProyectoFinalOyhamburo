@@ -110,8 +110,7 @@ function Carousel() {
       <div
         id="popular"
         style={{
-          width: "41rem",
-          paddingTop: "1rem",
+          width: "55rem",
         }}
       >
         <div className="carousel-h2-p">
@@ -123,7 +122,7 @@ function Carousel() {
         </div>
         <Slider {...settings}>
           {data.map((d) => (
-            <div style={{ width: "5rem" }}>
+            <div style={{}}>
               <div
                 style={{
                   borderTopLeftRadius: "0.75rem",
@@ -133,15 +132,17 @@ function Carousel() {
                   justifyContent: "center",
                   alignItems: "center",
                   marginLeft: "0rem",
+                  padding: "1rem",
                 }}
               >
                 <img
                   src={d.img}
                   alt=""
                   style={{
-                    height: "7rem",
-                    width: "7rem",
-                    padding: "0.5rem",
+                    height: "8rem",
+                    width: "8rem",
+                    marginTop: "0rem",
+                    padding: "0rem",
                   }}
                 />
               </div>
@@ -156,17 +157,17 @@ function Carousel() {
               >
                 <h3
                   style={{
-                    fontSize: "0.8rem",
+                    fontSize: "1rem",
                     fontWeight: 600,
                     marginBottom: "0px",
-                    marginTop: "0.2rem",
+                    marginTop: "0rem",
                   }}
                 >
                   {d.tile}
                 </h3>
                 <p
                   style={{
-                    fontSize: "0.8rem",
+                    fontSize: "1.1rem",
                     fontWeight: 600,
                     marginTop: "0px",
                   }}

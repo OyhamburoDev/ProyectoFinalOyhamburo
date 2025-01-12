@@ -6,22 +6,22 @@
 }
 
 .drawe-title {
-  font-size: 0.9rem;
+  font-size: 1.4rem;
   line-height: 1; /* Asegura que la altura de la línea no afecte la alineación */
-  margin-left: 4rem;
+  margin-left: 6rem;
   text-transform: uppercase;
   font-weight: 900;
 }
 
 .drawer-icon {
-  width: 0.9rem;
-  height: 0.9rem;
+  width: 1.4rem;
+  height: 1.4rem;
   vertical-align: middle; /* Alinea el SVG con el texto */
 }
 
 .icon-cart {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 4rem;
+  height: 4rem;
   color: #adacac;
 }
 
@@ -30,17 +30,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 .container-icon-p h4 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  font-size: 1.6rem;
 }
 
 .container-icon-p p {
   margin: 0;
   text-align: center;
-  font-size: 0.6rem;
+  font-size: 1rem;
 }
 
 .drawe-ctn-btn {
@@ -48,20 +49,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 2rem;
-  gap: 1rem;
+  margin-top: 3.5rem;
+  gap: 1.5rem;
 }
 
 .drawe-ctn-btn button {
   background-color: #000000; /* Fondo gris claro */
   color: #ffffff; /* Texto en gris oscuro */
-  font-size: 0.7rem; /* Tamaño de fuente */
+  font-size: 1rem; /* Tamaño de fuente */
   font-weight: 500; /* Peso de fuente moderado */
-  padding: 0.3rem 0.8rem; /* Espaciado interno */
+
   border: 1px solid #ccc; /* Borde sutil gris claro */
   border-radius: 25px; /* Bordes redondeados elegantes */
   cursor: pointer; /* Cursor tipo mano al pasar por encima */
   transition: background-color 0.3s ease, transform 0.2s ease,
     box-shadow 0.3s ease; /* Animación suave */
-  padding: 0.6rem 1rem 0.6rem 1rem;
+  padding: 0.9rem 1rem 0.9rem 1rem;
 }

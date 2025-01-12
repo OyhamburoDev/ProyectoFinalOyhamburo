@@ -1,10 +1,8 @@
 .cardPromo {
-  width: 22rem;
-  height: 20rem;
+  width: 34rem;
+  height: 29rem;
   background-color: #ffffff;
   margin-left: 0.5rem;
-  border-radius: 1rem;
-  margin-right: 0.5rem;
 
   display: flex;
   justify-content: end;
@@ -16,13 +14,13 @@
   border-radius: 10rem;
   color: white;
   border: none; /* Elimina el borde predeterminado */
-  padding: 8px 18px; /* Añade espacio interno */
+  padding: 9px 19px; /* Añade espacio interno */
   cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  font-size: 16px; /* Ajusta el tamaño de la fuente */
+  font-size: 1.4rem; /* Ajusta el tamaño de la fuente */
   transition: background-color 0.3s ease; /* Animación suave */
   display: flex;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
+  margin-bottom: 1.2rem;
+  margin-right: 1.2rem;
 }
 
 /* Estilo para hover */

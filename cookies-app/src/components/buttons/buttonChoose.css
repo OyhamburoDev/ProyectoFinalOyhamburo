@@ -1,12 +1,12 @@
 .buttonChoose {
   width: auto; /* Se ajusta al contenido */
   height: auto; /* Se ajusta automáticamente */
-  border-radius: 0.8rem; /* Bordes redondeados más pequeños */
-  padding: 0.25rem 0.7rem; /* Espaciado interno ajustado */
+  border-radius: 1rem; /* Bordes redondeados más pequeños */
+  padding: 0.4rem 1rem; /* Espaciado interno ajustado */
   margin-top: 1.5rem; /* Margen superior más pequeño */
   margin-right: 0.5rem;
   background-color: white; /* Fondo blanco por defecto */
-  font-size: 0.65rem; /* Texto ligeramente más pequeño */
+  font-size: 1rem; /* Texto ligeramente más pequeño */
   color: #000000; /* Color del texto oscuro */
   border: 1px solid #c7b9a5; /* Borde sutil */
   cursor: pointer; /* Cambia el cursor al pasar el ratón */
