@@ -29,52 +29,62 @@ function Carousel() {
       tile: `Cookie Half`,
       img: fotoCookieHalf,
       price: `$29,99`,
+      id: 1,
     },
     {
       tile: `Cookie Nut`,
       img: fotoCookieNut,
       price: `$29,99`,
+      id: 2,
     },
     {
       tile: `Cookie MyM Classic`,
       img: fotoCookieMyMClassic,
       price: `$29,99`,
+      id: 3,
     },
 
     {
       tile: `Cookie Lemon`,
       img: fotoCardOcho,
       price: `$29,99`,
+      id: 4,
     },
     {
       tile: `Cookie Coconut`,
       img: fotoCookieCoconut,
       price: `$29,99`,
+      id: 5,
     },
     {
       tile: `Cookie Strawberry`,
       img: fotoCookieStrawberry,
       price: `$29,99`,
+      id: 6,
     },
     {
       tile: `Cookie Lemon`,
       img: fotoCardCinco,
       price: `$29,99`,
+      id: 7,
     },
     {
       tile: `Chocolate Chips`,
       img: fotoCardSeis,
       price: `$29,99`,
+      id: 8,
     },
     {
       tile: `Cookie Honey`,
       img: fotoCookieHoney,
       price: `$29,99`,
+      id: 9,
     },
     {
       tile: `Cookie Sauce`,
       img: fotoCookieSauce,
       price: `$29,99`,
+      id: 10,
     },
   ];
 
@@ -122,7 +132,7 @@ function Carousel() {
         </div>
         <Slider {...settings}>
           {data.map((d) => (
-            <div style={{}}>
+            <div key={d.id}>
               <div
                 style={{
                   borderTopLeftRadius: "0.75rem",

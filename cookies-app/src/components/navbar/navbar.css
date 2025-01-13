@@ -17,6 +17,8 @@
   font-size: 2rem;
   margin-left: 3rem;
   color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 .navbar-crown {
   font-size: 1.8rem; /* Cambia este valor para ajustar el tamaño */

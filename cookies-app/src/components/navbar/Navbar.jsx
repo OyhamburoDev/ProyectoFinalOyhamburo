@@ -3,9 +3,9 @@ import { useState } from "react";
 import "./navbar.css";
 import AnchorTemporaryDrawer from "../drawer/Drawer.jsx";
 import Badge from "@mui/material/Badge";
+import { Link } from "react-router-dom";
 
-function Navbar() {
-  const [cartItems, setCartItems] = useState(1); // Inicializa con 0 elementos
+function Navbar({ cartItems, removeFromCart }) {
   const [state, setState] = useState({
     right: false,
   });
@@ -24,7 +24,9 @@ function Navbar() {
     <>
       <div className="container-navbar" id="navBar">
         <div className="container-navbar-title">
-          <h1 className="navbar-title">Cookies</h1>
+          <Link to="/" className="navbar-title">
+            <h1 className="navbar-title">Cookies</h1>
+          </Link>
           <h2 className="navbar-subtitle">
             <span className="material-symbols-outlined navbar-crown">
               crown
@@ -83,7 +85,7 @@ function Navbar() {
           </div>
           <div className="icon-carrito" onClick={toggleDrawer(true)}>
             <Badge
-              badgeContent={cartItems}
+              badgeContent={cartItems.length}
               color="error"
               className="badge-icon"
               overlap="circular"
@@ -122,7 +124,12 @@ function Navbar() {
           </div>
         </div>
       </div>
-      <AnchorTemporaryDrawer state={state} toggleDrawer={toggleDrawer} />
+      <AnchorTemporaryDrawer
+        state={state}
+        toggleDrawer={toggleDrawer}
+        cartItems={cartItems}
+        removeFromCart={removeFromCart}
+      />
     </>
   );
 }

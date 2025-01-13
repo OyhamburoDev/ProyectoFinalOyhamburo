@@ -66,3 +66,81 @@
     box-shadow 0.3s ease; /* Animación suave */
   padding: 0.9rem 1rem 0.9rem 1rem;
 }
+
+/* Estilos para el producto que se muestra dentro del drawer */
+.container-producto-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 44rem; /* Para que funcione bien, el contenedor debe tener altura definida */
+}
+
+.container-producto {
+  overflow-y: auto;
+  height: 25rem;
+  width: 93%;
+}
+
+.cnt-img-p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  padding: 0.6rem;
+}
+.cnt-p {
+  margin-right: 3rem;
+  font-size: 0.9rem;
+}
+.drawer-img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.icon-trash {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Drawer footer */
+
+.drawer-footer {
+  background-color: rgb(255, 255, 255);
+  width: 93%;
+}
+
+.total-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.p-total {
+  font-size: 1.5rem;
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  font-weight: bold; /* Aplica negrita */
+}
+
+.p-price {
+  font-size: 1.3rem;
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  font-weight: bold; /* Aplica negrita */
+}
+
+.button-pagar {
+  background-color: #000000;
+  border-radius: 10rem;
+  color: white;
+  border: none; /* Elimina el borde predeterminado */
+  padding: 15px 100px; /* Añade espacio interno */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  font-size: 1.2rem; /* Ajusta el tamaño de la fuente */
+  transition: background-color 0.3s ease; /* Animación suave */
+}
+/* Estilo para hover */
+.button-pagar:hover {
+  background-color: rgb(63, 62, 62); /* Color más claro al pasar el cursor */
+}

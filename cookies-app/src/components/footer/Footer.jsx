@@ -27,7 +27,7 @@ const Footer = () => {
             />
             <div className="footer-checkbox-label">
               <input type="checkbox" id="accept-cookies" />
-              <label for="accept-cookies">
+              <label htmlFor="accept-cookies">
                 He leído y acepto la{" "}
                 <a href="/politica-de-privacidad">política de privacidad</a> de
                 cookies.com

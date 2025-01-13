@@ -9,6 +9,10 @@
   padding-top: 2rem;
 }
 
+.card-link {
+  text-decoration: none;
+}
+
 .containerPremiun-title-button {
   display: flex;
   justify-content: space-between;
@@ -32,6 +36,7 @@
 
 .container-cards {
   display: flex;
+
   justify-content: center;
   align-items: center;
   gap: 1rem;

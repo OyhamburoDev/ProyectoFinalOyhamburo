@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
 import "./App.css";
 import "./index.css";
 import Home from "./components/home/Home";
@@ -10,12 +9,28 @@ import Footer from "./components/footer/Footer";
 import ProductDetail from "./components/productoDetail/ProductoDetail.jsx"; // Asegúrate de tener este archivo
 
 function App() {
+  const [cartItems, setCartItems] = useState([]); // El estado del carrito
+
+  // Función que incrementa el contador del carrito
+  const addToCart = (producto) => {
+    setCartItems((prevCart) => [...prevCart, producto]);
+  };
+
+  const removeFromCart = (id) => {
+    setCartItems((prevCart) => prevCart.filter((item) => item.id !== id));
+  };
+
   return (
     <Router>
-      <NavBar />
+      <NavBar cartItems={cartItems} removeFromCart={removeFromCart} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route
+          path="/product/:id"
+          element={
+            <ProductDetail addToCart={addToCart} cartItems={cartItems} />
+          }
+        />
       </Routes>
       <Footer />
     </Router>

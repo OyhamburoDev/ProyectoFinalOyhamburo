@@ -2,11 +2,6 @@
 import Card from "../cards/Cards.jsx";
 
 // Importación de imágenes
-import fotoCard from "../../assets/images/cookie-card.jpg";
-import fotoCardDos from "../../assets/images/cookie-cardDos.jpg";
-import fotoCardTres from "../../assets/images/cookie-cardTres.jpg";
-import fotoCardCuatro from "../../assets/images/cookie-cardCuatro.jpg";
-import fotoCardSiete from "../../assets/images/cookie-cardSiete.jpg";
 import fotoCookieClassic from "../../assets/images/cookie-relleno.jpg";
 import fotoCookiePromo from "../../assets/images/cookie-promo.jpg";
 import fotoCookieLemon from "../../assets/images/cookie-envios.jpg";
@@ -23,7 +18,7 @@ import CardClassic from "../cards/CardClassic.jsx";
 import CardRelleno from "../cards/CardRelleno.jsx";
 import ButtonChoose from "../buttons/ButtonChoose.jsx";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -33,14 +28,22 @@ import SegmentedButton from "../buttons/SegmentedButton.jsx";
 // importacion re react-router link
 import { Link } from "react-router-dom";
 
+import { getProductos } from "../../data/asyncMock.js";
+
 // Componente principal Home
 function Home() {
   // useState para levantar las cards de Cookies Premium
   const [cardActiva, setCardActiva] = useState(null);
 
+  const [productos, setProductos] = useState([]);
+
   const levantaCard = (indice) => {
     setCardActiva(indice);
   };
+
+  useEffect(() => {
+    getProductos().then((data) => setProductos(data));
+  });
 
   return (
     <main
@@ -75,51 +78,23 @@ function Home() {
           </div>
         </div>
         <div className="container-cards">
-          <Link to="/product/1" className="card-link">
-            <Card
-              className={`card-effect ${cardActiva === 1 ? "card-active" : ""}`}
-              title="Cookie MYM"
-              price="29.99"
-              image={fotoCard}
-              id={1}
-            />
-          </Link>
-          <Link to="/product/2" className="card-link">
-            <Card
-              className={`card-effect ${cardActiva === 2 ? "card-active" : ""}`}
-              title="Cookie Lemon Pie"
-              price="29.99"
-              image={fotoCardDos}
-              id={2}
-            />
-          </Link>
-          <Link to="/product/3" className="card-link">
-            <Card
-              className={`card-effect ${cardActiva === 3 ? "card-active" : ""}`}
-              title="Cookie Mega Chocolate"
-              price="29.99"
-              image={fotoCardTres}
-              id={3}
-            />
-          </Link>
-          <Link to="/product/4" className="card-link">
-            <Card
-              className={`card-effect ${cardActiva === 4 ? "card-active" : ""}`}
-              title="Cookie Kinder"
-              price="29.99"
-              image={fotoCardCuatro}
-              id={4}
-            />
-          </Link>
-          <Link to="/product/5" className="card-link">
-            <Card
-              className={`card-effect ${cardActiva === 5 ? "card-active" : ""}`}
-              title="Cookie Mega Oreo"
-              price="29.99"
-              image={fotoCardSiete}
-              id={5}
-            />
-          </Link>
+          {productos.map((producto) => (
+            <Link
+              to={`/product/${producto.id}`}
+              className="card-link"
+              key={producto.id}
+            >
+              <Card
+                className={`card-effect ${
+                  cardActiva === 1 ? "card-active" : ""
+                }`}
+                title={producto.title}
+                price={producto.price}
+                image={producto.image}
+                id={producto.id}
+              />
+            </Link>
+          ))}
         </div>
       </div>
       {/* Seccion para el carousel */}
