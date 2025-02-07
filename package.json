@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "@ebay/skin": "^18.6.0",
-    "react-router-dom": "^7.1.1"
-  }
-}
