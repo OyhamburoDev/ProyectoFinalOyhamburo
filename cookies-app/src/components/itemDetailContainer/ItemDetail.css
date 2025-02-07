@@ -1,0 +1,102 @@
+.cnt-item-detail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  background-color: #1a1a1a;
+  margin: 4rem auto;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  height: 18rem;
+}
+
+.cnt-img {
+  flex: 1;
+  max-width: 300px;
+  overflow: hidden;
+  border-radius: 15px;
+  height: 18rem;
+  background-color: #1a1a1a;
+}
+
+.img-item-detail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.img-item-detail:hover {
+  transform: scale(1.05);
+}
+
+.cnt-title-price {
+  flex: 2;
+  padding: 0 2rem;
+}
+
+.title-item-detail {
+  font-size: 2rem;
+  color: #d4af37;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.price-item-detail {
+  font-size: 1.5rem;
+  color: #e5e5e5;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.stock-item-detail {
+  font-size: 1.3rem;
+  color: #e5e5e5;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.p-item-detail {
+  font-size: 1.1rem;
+  color: #cccccc;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.item-count-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Estilos del contador de productos y botón */
+.item-count-wrapper button {
+  padding: 0.8rem 1.2rem;
+  background-color: #d4af37;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.item-count-wrapper button:hover {
+  background-color: #b8962e;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.item-count-wrapper button:active {
+  transform: scale(0.95);
+}
+
+.item-count-wrapper button:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(212, 175, 55, 0.8);
+}

@@ -1,0 +1,130 @@
+.carrusel-luxury {
+  padding: 2rem 2rem;
+  padding-bottom: 6rem;
+
+  background: var(--color-fondo);
+}
+
+.encabezado {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.encabezado h2 {
+  color: var(--tarjeta-oscura);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.encabezado p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.contenedor-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative; /* Necesario para que ::before funcione */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarjeta-categoria {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  background-size: cover !important;
+  transition: transform 0.3s ease;
+  position: relative; /* Asegura que el z-index funcione */
+  z-index: 2; /* Mayor que el z-index de ::before */
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.tarjeta-categoria:hover {
+  transform: translateY(-5px);
+}
+.tarjeta-categoria::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  z-index: 1; /* Coloca la capa por encima del fondo */
+  pointer-events: none; /* Permite interactuar con la tarjeta */
+  border-radius: 12px; /* Para que coincida con la tarjeta */
+}
+.contenido-tarjeta {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  width: 100%;
+}
+.contenido-tarjeta h3,
+.contenido-tarjeta p {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.contenido-tarjeta h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contenido-tarjeta p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.boton-vermas {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent !important; /* Elimina el fondo azul */
+  -webkit-tap-highlight-color: transparent;
+  display: inline-flex; /* Cambiamos a flex para mejor control */
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 1rem; /* Añade padding horizontal */
+}
+
+.linea-efecto {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-acento);
+  transition: width 0.3s ease;
+  left: 50%; /* Centramos horizontalmente */
+  transform: translateX(-50%); /* Ajuste fino de centrado */
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.boton-vermas:hover .linea-efecto {
+  width: 100%;
+}
+
+.contenido-tarjeta p {
+  color: #f3cc4b;
+}

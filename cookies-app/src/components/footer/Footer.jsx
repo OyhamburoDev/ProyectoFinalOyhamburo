@@ -1,13 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import "../footer/footer.css";
-import fotoIconoInstagram from "../../assets/images/icono-instagram.png";
-import fotoIconoMeta from "../../assets/images/icono-meta.png";
-import fotoIconoLinkedin from "../../assets/images/icono-linkedin.png";
-import fotoIconoMasterCard from "../../assets/images/icono-masterCard.png";
-import fotoIconoMercadoPago from "../../assets/images/icono-mercadoPago.png";
-import fotoIconoVisa from "../../assets/images/icono-visa.png";
+import fotoIconoInstagram from "/images/icono-instagram.png";
+import fotoIconoMeta from "/images/icono-meta.png";
+import fotoIconoLinkedin from "/images/icono-linkedin.png";
+import fotoIconoMasterCard from "/images/icono-masterCard.png";
+import fotoIconoMercadoPago from "/images/icono-mercadoPago.png";
+import fotoIconoVisa from "/images/icono-visa.png";
+import { Link } from "react-router-dom";
+import { db } from "../../firebase.js";
+import { collection, addDoc } from "firebase/firestore";
 
 const Footer = () => {
+  const handleGoHome = () => {
+    window.scrollTo(0, 0); // Desplazar al inicio de la página
+  };
+
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+  const [mensajeExito, setMensajeExito] = useState("");
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleCheckbox = (event) => {
+    setIsChecked(event.target.value);
+  };
+
+  const manejadorFormulario = async (event) => {
+    event.preventDefault();
+    if (!email) {
+      setError("Por favor ingresa un correo");
+      return;
+    } else if (!isChecked) {
+      setError("Por favor acepta los terminos y condiciones");
+      return;
+    }
+    try {
+      await addDoc(collection(db, "suscriptores"), {
+        email: email,
+        fecha: new Date(),
+      });
+      setMensajeExito("Gracias por suscribirte");
+      setError("");
+      setEmail("");
+    } catch (error) {
+      setError(
+        "Hubo un problema al procesar tu suscripción. Intenta nuevamente"
+      );
+    }
+  };
+
   return (
     <>
       <footer className="container-footer">
@@ -19,20 +63,32 @@ const Footer = () => {
           </h3>
 
           <div className="footer-container-input">
-            <input
-              type="email"
-              id="intro-email"
-              placeholder="Ingresa tu correo electrónico aquí →"
-              className="input-uno"
-            />
-            <div className="footer-checkbox-label">
-              <input type="checkbox" id="accept-cookies" />
-              <label htmlFor="accept-cookies">
-                He leído y acepto la{" "}
-                <a href="/politica-de-privacidad">política de privacidad</a> de
-                cookies.com
-              </label>
-            </div>
+            <form onSubmit={manejadorFormulario}>
+              <input
+                type="email"
+                id="intro-email"
+                placeholder="Ingresa tu correo electrónico aquí →"
+                className="input-uno"
+                onChange={handleEmailChange}
+              />
+              <div className="footer-checkbox-label">
+                <input
+                  type="checkbox"
+                  id="accept-cookies"
+                  onChange={handleCheckbox}
+                />
+                <label htmlFor="accept-cookies">
+                  He leído y acepto la{" "}
+                  <a href="/politica-de-privacidad">política de privacidad</a>{" "}
+                  de cookies.com
+                </label>
+              </div>
+              {mensajeExito && (
+                <p className="success-message">{mensajeExito}</p>
+              )}
+              {error && <p className="error-message">{error}</p>}
+              <button className="btn-footer">suscribirse</button>
+            </form>
           </div>
         </div>
         {/* DIV NúMERO DOS */}
@@ -41,16 +97,16 @@ const Footer = () => {
           <div className="footer-container-navbar">
             <ul className="footer-navbar">
               <li>
-                <a href="#home"> Rellenas</a>
+                <Link to="/categoria/1">Premium</Link>
               </li>
               <li>
-                <a href="#premium"> Premium</a>
+                <Link to="/categoria/2">Popular</Link>
               </li>
               <li>
-                <a href="#popular"> Popular</a>
+                <Link to="/categoria/3">Classic</Link>
               </li>
               <li>
-                <a href="#classic"> Classic</a>
+                <Link to="/categoria/1">Rellenas</Link>
               </li>
             </ul>
           </div>
@@ -61,16 +117,16 @@ const Footer = () => {
           <div className="footer-container-navbar">
             <ul className="footer-navbar">
               <li>
-                <a href="">Cookies Rellenas</a>
+                <Link to="/categoria/1">Cookies Premium</Link>
               </li>
               <li>
-                <a href="">Cookies Premium</a>
+                <Link to="/categoria/2">Cookies Popular</Link>
               </li>
               <li>
-                <a href="">Cookies Popular</a>
+                <Link to="/categoria/3">Cookies Classic</Link>
               </li>
               <li>
-                <a href="">Cookies Classic</a>
+                <Link to="/categoria/1">Cookies Rellenas</Link>
               </li>
             </ul>
           </div>
@@ -110,16 +166,9 @@ const Footer = () => {
           />
         </div>
         <div className="footer-btn-container">
-          {" "}
-          <button
-            className="button-footer"
-            onClick={() => {
-              const navbar = document.getElementById("navBar");
-              navbar?.scrollIntoView({ behavior: "smooth" });
-            }}
-          >
-            Volver al inicio
-          </button>
+          <Link to="/" onClick={handleGoHome}>
+            <button className="button-footer">Volver al inicio</button>
+          </Link>
         </div>
       </div>
     </>

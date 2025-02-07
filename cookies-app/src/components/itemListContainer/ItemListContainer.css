@@ -1,0 +1,10 @@
+.cnt-item-list {
+  height: 100%;
+}
+
+.p-loading {
+  display: flex;
+  justify-content: center;
+  height: 25rem;
+  margin-top: 5rem;
+}

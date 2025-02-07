@@ -1,36 +1,22 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useState } from "react";
-
 import "./App.css";
 import "./index.css";
-import Home from "./components/home/Home";
+import Home from "./components/pages/home/Home";
 import NavBar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-import ProductDetail from "./components/productoDetail/ProductoDetail.jsx"; // Asegúrate de tener este archivo
+import ItemListContainer from "./components/itemListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/itemDetailContainer/ItemDetailContainer.jsx";
+import Checkout from "./components/checkout/Checkout.jsx";
 
 function App() {
-  const [cartItems, setCartItems] = useState([]); // El estado del carrito
-
-  // Función que incrementa el contador del carrito
-  const addToCart = (producto) => {
-    setCartItems((prevCart) => [...prevCart, producto]);
-  };
-
-  const removeFromCart = (id) => {
-    setCartItems((prevCart) => prevCart.filter((item) => item.id !== id));
-  };
-
   return (
     <Router>
-      <NavBar cartItems={cartItems} removeFromCart={removeFromCart} />
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route
-          path="/product/:id"
-          element={
-            <ProductDetail addToCart={addToCart} cartItems={cartItems} />
-          }
-        />
+        <Route path="/categoria/:id" element={<ItemListContainer />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/detalles/:id" element={<ItemDetailContainer />} />
       </Routes>
       <Footer />
     </Router>

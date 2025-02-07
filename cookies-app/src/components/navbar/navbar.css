@@ -1,89 +1,105 @@
-.container-navbar {
+.navbar {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
   height: 5rem;
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo con transparencia */
   position: sticky;
   top: 0;
   z-index: 1000;
+  backdrop-filter: blur(10px); /* Fondo desenfocado */
+  padding: 0 2rem;
+  transition: background-color 0.3s ease; /* Suaviza el cambio de color */
 }
 
-.container-navbar-title {
+.navbar-logo {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vh;
 }
 
 .navbar-title {
   font-size: 2rem;
-  margin-left: 3rem;
   color: white;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
+
 .navbar-crown {
-  font-size: 1.8rem; /* Cambia este valor para ajustar el tamaño */
-  vertical-align: middle; /* Opcional: centra verticalmente con el texto */
-  color: #e38035; /* Opcional: cambia el color del ícono */
+  font-size: 1.8rem;
+  color: #e38035;
 }
+
 .navbar-subtitle {
   font-size: 1rem;
   color: #e38035;
-  margin-bottom: 0px;
+  margin-left: 0.5rem;
 }
 
-.container-navbar-list {
+.navbar-links {
+  flex-grow: 1;
   display: flex;
+  justify-content: center;
+  width: 100vh;
 }
+
 .navbar-list {
   display: flex;
-  font-size: 1.4rem;
-  gap: 1.6rem;
+  gap: 2rem;
   list-style-type: none;
-  padding-left: 0px;
+  padding-left: 0;
 }
 
 .navbar-list li a {
   text-decoration: none;
   color: white;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
-.container-navbar-icons {
+.navbar-list li a:hover {
+  color: #e38035;
+}
+
+.navbar-icons {
   display: flex;
-  gap: 1.2rem;
-  margin-right: 3rem;
-  color: white;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100vh;
 }
 
-.icon-buscar {
-  width: 1.6rem;
-  height: 1.6rem;
-}
-
-.icon-like {
-  width: 1.6rem;
-  height: 1.6rem;
-}
-
-.icon-carrito {
-  position: relative;
-  display: inline-flex;
-  width: 1.6rem;
-  height: 1.6rem;
-}
-.badge-icon .MuiBadge-badge {
-  top: -1px; /* Ajusta la posición vertical */
-  right: -1px; /* Ajusta la posición horizontal */
-  min-width: 1.2rem; /* Ancho mínimo del badge */
-  height: 1.2rem; /* Altura del badge */
-  border-radius: 50%; /* Lo hace redondo */
-  font-size: 0.8rem; /* Tamaño de la fuente dentro del badge */
-  padding: 0; /* Elimina cualquier relleno adicional */
-  display: flex; /* Usamos flexbox para centrar el número */
-  justify-content: center; /* Centrado horizontal */
-  align-items: center; /* Centrado vertical */
-}
-
+.icon-buscar,
+.icon-like,
+.icon-carrito,
 .icon-usuario {
   width: 1.6rem;
   height: 1.6rem;
+  cursor: pointer;
+  color: white;
+}
+.icon-carrito {
+  position: relative;
+}
+
+.badge-icon .MuiBadge-badge {
+  top: -10px;
+  right: -1px;
+  min-width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff4444; /* Color sólido para el badge */
+  backdrop-filter: none; /* Elimina efecto de transparencia heredado */
+}
+
+.badge-icon .MuiBadge-badge {
+  /* ... */
+  background-color: #ff4444 !important; /* Fondo sólido */
+  border: 2px solid white; /* Opcional: borde para mejor contraste */
 }

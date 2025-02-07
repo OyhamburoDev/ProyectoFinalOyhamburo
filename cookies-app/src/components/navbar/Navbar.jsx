@@ -1,29 +1,26 @@
-import { Drawer } from "@mui/material";
 import { useState } from "react";
 import "./navbar.css";
-import AnchorTemporaryDrawer from "../drawer/Drawer.jsx";
 import Badge from "@mui/material/Badge";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+import CartSidebar from "../cartSlidebar/CartSlidebar.jsx";
 
-function Navbar({ cartItems, removeFromCart }) {
-  const [state, setState] = useState({
-    right: false,
-  });
+function Navbar() {
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const { cantidadTotal } = useContext(CartContext);
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
 
-  const toggleDrawer = (open) => (event) => {
-    if (
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
-    }
-    setState({ right: open });
+  const handleGoHome = () => {
+    window.scrollTo(0, 0); // Desplazar al inicio de la página
   };
 
   return (
     <>
-      <div className="container-navbar" id="navBar">
-        <div className="container-navbar-title">
+      <div className="navbar">
+        <div className="navbar-logo">
           <Link to="/" className="navbar-title">
             <h1 className="navbar-title">Cookies</h1>
           </Link>
@@ -34,23 +31,31 @@ function Navbar({ cartItems, removeFromCart }) {
             Premium
           </h2>
         </div>
-        <div className="container-navbar-list">
+        <div className="navbar-links">
           <ul className="navbar-list">
             <li>
-              <a href="#">Home</a>
+              <Link to="/" onClick={handleGoHome}>
+                Home
+              </Link>
             </li>
             <li>
-              <a href="#premium">Premium</a>
+              <Link to="/categoria/1" onClick={handleGoHome}>
+                Premium
+              </Link>
             </li>
             <li>
-              <a href="#popular">Popular</a>
+              <Link to="/categoria/2" onClick={handleGoHome}>
+                Popular
+              </Link>
             </li>
             <li>
-              <a href="#classic">Classic</a>
+              <Link to="/categoria/3" onClick={handleGoHome}>
+                Classic
+              </Link>
             </li>
           </ul>
         </div>
-        <div className="container-navbar-icons">
+        <div className="navbar-icons">
           <div className="icon-buscar">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -83,27 +88,37 @@ function Navbar({ cartItems, removeFromCart }) {
               />
             </svg>
           </div>
-          <div className="icon-carrito" onClick={toggleDrawer(true)}>
+          <div
+            className="icon-carrito"
+            onClick={toggleCart}
+            style={{
+              cursor: "pointer",
+              position: "relative",
+              display: "flex", // Alinea ícono y badge
+              alignItems: "center",
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="size-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+              />
+            </svg>
             <Badge
-              badgeContent={cartItems.length}
+              badgeContent={cantidadTotal}
               color="error"
               className="badge-icon"
               overlap="circular"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="size-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-                />
-              </svg>
+              {" "}
             </Badge>
           </div>
           <div className="icon-usuario">
@@ -124,12 +139,7 @@ function Navbar({ cartItems, removeFromCart }) {
           </div>
         </div>
       </div>
-      <AnchorTemporaryDrawer
-        state={state}
-        toggleDrawer={toggleDrawer}
-        cartItems={cartItems}
-        removeFromCart={removeFromCart}
-      />
+      <CartSidebar isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} />
     </>
   );
 }

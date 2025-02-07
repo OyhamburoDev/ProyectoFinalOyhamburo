@@ -1,0 +1,70 @@
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Línea divisoria suave */
+  padding-left: 0px;
+  padding-right: 0px;
+  height: 6rem; /* Asegurar que todos los elementos tengan el mismo alto */
+  gap: 0.5rem;
+}
+
+.cart-item:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.ctn-img-title {
+  display: flex;
+  flex-direction: row;
+}
+
+.title-cart-item {
+  color: black;
+}
+
+.price-cart-item {
+  color: black;
+}
+
+.cart-img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.icon-trash {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.img-car-item-cnt {
+  width: 25vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.title-car-item-cnt {
+  width: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.price-car-item-cnt {
+  width: 27vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.ctn-trash-price {
+  width: 18vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 1.5rem;
+}

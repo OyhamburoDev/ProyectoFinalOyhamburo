@@ -1,0 +1,18 @@
+.item-cnt {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.count-btn {
+}
+
+.count-num {
+  color: #fff;
+}
+
+.count-btn {
+}
+
+.add-to-cart-btn {
+}

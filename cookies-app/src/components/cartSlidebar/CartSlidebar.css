@@ -1,0 +1,107 @@
+/* Estilos mejorados para el carrito deslizante */
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  width: 24rem;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95); /* Transparencia ligera */
+  backdrop-filter: blur(10px); /* Desenfoque elegante */
+  transition: right 0.3s ease-in-out;
+  box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.3);
+  right: -25rem;
+  z-index: 1100;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px 0 0 10px;
+}
+
+.cart-sidebar.open {
+  right: 0;
+}
+
+.cart-sidebar-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.h2-cart-slidebar {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.h2-icon-close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-close {
+  color: #666;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.icon-close:hover {
+  color: #d4af37; /* Dorado premium */
+}
+
+.cart-items-list {
+  overflow-y: auto;
+  max-height: 25rem;
+  padding-right: 0.5rem;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cart-img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.title-cart-item {
+  color: #333;
+  font-weight: 600;
+}
+
+.price-cart-item {
+  color: #666;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.icon-trash {
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.icon-trash:hover {
+  color: #d4af37;
+}
+
+.button-pagar {
+  background-color: #000;
+  border-radius: 10rem;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.button-pagar:hover {
+  background-color: #d4af37;
+}

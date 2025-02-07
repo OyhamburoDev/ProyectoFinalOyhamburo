@@ -1,0 +1,6 @@
+.cnt-item-detail-container {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  height: 30rem;
+}

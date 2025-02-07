@@ -1,0 +1,84 @@
+.historia-luxury {
+  padding: 6rem 4rem;
+  background: var(--color-fondo);
+  padding-bottom: 7rem;
+}
+
+.contenedor-historia {
+  display: flex;
+  flex-direction: row;
+}
+.columna-textos {
+  width: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center; /* Centra los elementos hijos */
+}
+.boton-saber-mas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  width: 35vh;
+}
+
+.columna-imagen {
+  width: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.columna-textos h2 {
+  color: var(--tarjeta-oscura);
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.destacado {
+  color: var(--color-acento);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.linea-separadora {
+  width: 100px;
+  height: 2px;
+  background: var(--color-bordes);
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.descripcion {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.boton-saber-mas {
+  background: none;
+  border: 2px solid var(--tarjeta-oscura);
+  color: var(--tarjeta-oscura);
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.boton-saber-mas:hover {
+  background: var(--tarjeta-oscura);
+  color: white;
+}
+
+.marco-imagen {
+  height: 30rem;
+  width: 30rem;
+  background: url("/images/cookie-enviosUno.jpg") center/cover;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 15px 15px 0 var(--color-acento);
+}

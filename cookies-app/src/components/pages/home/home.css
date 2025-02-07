@@ -1,0 +1,276 @@
+.container-desc-promo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.container-premium {
+  padding-top: 2rem;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.containerPremiun-title-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.container-buttonsChoose {
+  margin-right: 6rem;
+}
+
+.h2-main {
+  display: flex;
+  justify-content: left;
+  margin-top: 2rem;
+  margin-left: 7rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.container-cards {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Efecto para las cards premium */
+.card-effect {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suavidad en la animación */
+}
+
+.card-effect:hover {
+  transform: translateY(-10px); /* Mueve la card hacia arriba */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta el sombreado para efecto 3D */
+}
+
+.card-active {
+  transform: translateY(-10px); /* Mueve la card hacia arriba */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta el sombreado para efecto 3D */
+}
+
+.buttonPass-right {
+  display: flex !important; /* Asegura que se vean */
+  justify-content: center;
+  align-items: center;
+  background-color: #000; /* Fondo negro */
+  color: #fff; /* Texto/blanco para contraste */
+  width: 40px; /* Ancho del botón */
+  height: 40px; /* Alto del botón */
+  border-radius: 50%; /* Forma redonda */
+  border: none; /* Sin bordes */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  z-index: 10; /* Asegura que esté visible */
+  opacity: 1; /* Asegúrate de que no esté transparente */
+  transition: background-color 0.3s, transform 0.2s; /* Efectos de transición */
+}
+
+.buttonPass-right:hover {
+  background-color: #444; /* Fondo más oscuro al pasar el ratón */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar */
+}
+
+.buttonPass-right:active {
+  background-color: #222; /* Fondo aún más oscuro al hacer clic */
+}
+
+.navigation-icon {
+  fill: #fff; /* Color del ícono dentro del botón */
+  width: 20px; /* Tamaño del ícono */
+  height: 20px;
+}
+
+.cardRelleno-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 23rem !important;
+  height: 15rem !important;
+  margin-top: 2rem;
+}
+
+.cardRelleno-container h3 {
+  margin-top: 3rem;
+  margin-bottom: 0px;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+}
+.cardRelleno-container p {
+  margin-top: 0.4rem;
+  font-size: 1rem;
+  margin-bottom: 0px;
+  margin-left: 1rem;
+}
+
+.cardRelleno-button {
+  display: flex;
+  margin-top: 0px;
+  margin-left: 1rem;
+}
+.cardRelleno-button button {
+  margin-top: 0.4rem;
+  margin-left: 0.5rem;
+}
+
+.relleno-button {
+  background-color: #f1f1f1; /* Fondo gris claro */
+  color: #333; /* Texto en gris oscuro */
+  font-size: 1rem; /* Tamaño de fuente */
+  font-weight: 500; /* Peso de fuente moderado */
+  padding: 0.4rem 0.9rem; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde sutil gris claro */
+  border-radius: 25px; /* Bordes redondeados elegantes */
+  cursor: pointer; /* Cursor tipo mano al pasar por encima */
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease; /* Animación suave */
+}
+
+/* Efectos al pasar el cursor */
+.relleno-button:hover {
+  background-color: #e0e0e0; /* Fondo más oscuro al pasar el cursor */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil al pasar */
+}
+
+/* Efectos al hacer clic */
+.relleno-button:active {
+  background-color: #d4d4d4; /* Fondo más oscuro al hacer clic */
+  transform: scale(0.98); /* Ligera reducción al hacer clic */
+}
+
+.navigation-button {
+  width: 2rem; /* Botones un poco más grandes */
+  height: 2rem;
+  border-radius: 50%; /* Forma circular */
+  padding: 0.3rem;
+  background-color: #fbf4e0; /* Fondo claro */
+  border: 1px solid #c7b9a5; /* Borde sutil */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0px;
+  margin-bottom: 2rem;
+}
+
+.navigation-button:hover {
+  background-color: #f3e8c5; /* Fondo más claro al pasar el ratón */
+  border-color: #bfa78c; /* Borde más destacado */
+  transform: scale(1.05); /* Pequeño efecto de zoom */
+}
+
+.navigation-icon {
+  width: 1rem; /* Tamaño del ícono */
+  height: 1rem;
+  stroke: #67481f; /* Color del ícono */
+}
+
+.navigation-counter {
+  font-size: 0.8rem; /* Tamaño del texto */
+  font-weight: bold; /* Texto destacado */
+  color: #67481f; /* Color del contador */
+}
+
+.button-relleno {
+  width: auto; /* Se ajusta al contenido */
+  height: auto; /* Se ajusta automáticamente */
+  border-radius: 0.8rem; /* Bordes redondeados más pequeños */
+  padding: 0.25rem 0.7rem; /* Espaciado interno ajustado */
+  margin-top: 1.5rem; /* Margen superior más pequeño */
+  margin-right: 0.5rem;
+  background-color: white; /* Fondo blanco por defecto */
+  font-size: 0.65rem; /* Texto ligeramente más pequeño */
+  color: #000000; /* Color del texto oscuro */
+  border: 1px solid #c7b9a5; /* Borde sutil */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+  transition: all 0.3s ease; /* Animación suave al interactuar */
+}
+
+/* Efecto hover (cuando el ratón pasa por encima) */
+.button-relleno:hover {
+  background-color: #333333; /* Fondo negro en hover */
+  color: white; /* Texto blanco en hover */
+  border-color: #000000; /* Bordes también oscuros */
+  transform: scale(1.05); /* Pequeño zoom al pasar el cursor */
+}
+
+/* Efecto al hacer click (activo) */
+.button-relleno:active {
+  background-color: #333333; /* Fondo negro al hacer click */
+  color: white; /* Texto blanco al hacer click */
+  border-color: #333333; /* Bordes oscuros */
+}
+
+/* Aqui comienzan las cards clasicas */
+.container-clasicos {
+  padding-top: 3rem;
+}
+
+.clasic-ctn-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-cardsClassic {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+}
+
+.clasicos-button {
+  background-color: white !important;
+  color: #161616; /* Texto en gris oscuro */
+  font-size: 0.7rem; /* Tamaño de fuente */
+  font-weight: 500; /* Peso de fuente moderado */
+  padding: 0.3rem 0.8rem; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde sutil gris claro */
+  border-radius: 25px; /* Bordes redondeados elegantes */
+  cursor: pointer; /* Cursor tipo mano al pasar por encima */
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease; /* Animación suave */
+}
+
+/* Efectos al pasar el cursor */
+.clasicos-button:hover {
+  background-color: #ffffff; /* Fondo más oscuro al pasar el cursor */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil al pasar */
+}
+
+/* Efectos al hacer clic */
+.clasicos-button:active {
+  background-color: #ffffff; /* Fondo más oscuro al hacer clic */
+  transform: scale(0.98); /* Ligera reducción al hacer clic */
+}
+
+.clasicos-title-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.clasicos-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 0px;
+}
+.clasicos-enlace {
+  text-decoration: none;
+  color: #4a4a4a; /* Cambia el color del enlace */
+  color: #000;
+
+  font-size: 1rem;
+}
