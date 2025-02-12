@@ -98,7 +98,7 @@ function Navbar() {
             style={{
               cursor: "pointer",
               position: "relative",
-              display: "flex", // Alinea ícono y badge
+              display: "flex",
               alignItems: "center",
             }}
           >
@@ -128,7 +128,7 @@ function Navbar() {
           <div className="icon-usuario">
             <Badge
               badgeContent={<MailIcon fontSize="small" />}
-              invisible={!usuarioGuardado} // Solo se muestra si hay usuario
+              invisible={!usuarioGuardado} // Solo se muestra si hay usuario (PROFE ESTOY TRABAJANDO EN ESTO)
               className="user-icon-badge"
             >
               <div className="icon-usuario">

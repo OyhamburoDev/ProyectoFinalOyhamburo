@@ -3,8 +3,28 @@
 }
 
 .p-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
-  height: 25rem;
-  margin-top: 5rem;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.MuiCircularProgress-root {
+  color: #ff6f61; /* Color de tu marca o el que prefieras */
+  animation: rotate 1.4s infinite linear; /* Animación para el loader si deseas personalizarla */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

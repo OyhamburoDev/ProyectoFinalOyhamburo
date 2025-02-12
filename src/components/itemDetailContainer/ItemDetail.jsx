@@ -16,10 +16,7 @@ const ItemDetail = ({ detalles }) => {
         <h2 className="title-item-detail">{detalles.title}</h2>
         <h3 className="price-item-detail">${detalles.price}</h3>
         <h3 className="stock-item-detail">Stock: {detalles.stock}</h3>
-        <p className="p-item-detail">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-          suscipit neque ac velit efficitur, vel vulputate sapien scelerisque.
-        </p>
+        <p className="p-item-detail">{detalles.description}</p>
         <div className="item-count-wrapper">
           <ItemCount detalles={detalles} />
         </div>

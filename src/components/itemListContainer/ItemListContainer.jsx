@@ -3,6 +3,8 @@ import { getProductosFromFirestore } from "../../services/firebase.js";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 import "./ItemListContainer.css";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
@@ -26,7 +28,9 @@ const ItemListContainer = () => {
       {productos.length > 0 ? (
         <ItemList productos={productos} />
       ) : (
-        <p className="p-loading">Cargando categoría seleccionada...</p>
+        <Box className="p-loading">
+          <CircularProgress size="6rem" color="inherit" />
+        </Box>
       )}
     </div>
   );

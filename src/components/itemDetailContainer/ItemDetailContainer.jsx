@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail.jsx";
 import { getElegirUnProducto } from "../../services/firebase.js";
 import "./ItemDetailContainer.css";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 
 const ItemDetailContainer = () => {
   const [detalles, setDetalles] = useState([]);
@@ -26,7 +28,9 @@ const ItemDetailContainer = () => {
         {detalles ? (
           <ItemDetail detalles={detalles} />
         ) : (
-          <p>Cargando detalles del producto...</p>
+          <Box className="p-loading">
+            <CircularProgress size="6rem" color="inherit" />
+          </Box>
         )}
       </div>
     </>
