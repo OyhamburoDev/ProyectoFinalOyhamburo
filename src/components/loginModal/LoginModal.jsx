@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import "./LoginModal.css";
 import { registerUser, loginUser } from "../../services/firebase.js";
 
