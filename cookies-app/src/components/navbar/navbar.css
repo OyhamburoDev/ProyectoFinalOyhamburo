@@ -103,3 +103,14 @@
   background-color: #ff4444 !important; /* Fondo sólido */
   border: 2px solid white; /* Opcional: borde para mejor contraste */
 }
+
+.user-icon-badge .MuiBadge-badge {
+  width: 20px; /* Aumenta el tamaño del badge */
+  height: 18px;
+  font-size: 13px;
+  color: #ff4444;
+  border: 2px solid white;
+  border-radius: 4px; /* Hace que los bordes sean cuadrados */
+  top: 2.5px;
+  right: 0px;
+}

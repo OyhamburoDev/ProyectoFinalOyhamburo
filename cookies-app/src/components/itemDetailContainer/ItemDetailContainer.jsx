@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail.jsx";
-import { getElegirUnProducto } from "../../firebase.js";
+import { getElegirUnProducto } from "../../services/firebase.js";
 import "./ItemDetailContainer.css";
 
 const ItemDetailContainer = () => {

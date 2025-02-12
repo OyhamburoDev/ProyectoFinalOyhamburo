@@ -1,0 +1,169 @@
+/* LoginModal.css */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Fondo más oscuro para mejor contraste */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  backdrop-filter: blur(5px); /* Efecto de desenfoque del fondo */
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background: rgba(
+    0,
+    0,
+    0,
+    0.2
+  ); /* Fondo más oscuro para mejor contraste con dorado */
+  padding: 2rem;
+  border-radius: 15px;
+  width: 320px;
+  backdrop-filter: blur(10px); /* Efecto vidrio */
+  border: 1px solid rgba(255, 215, 0, 0.3); /* Borde dorado sutil */
+  box-shadow: 0 8px 32px 0 rgba(255, 215, 0, 0.1); /* Sombra dorada */
+  transform: scale(0.9); /* Efecto de escala inicial para la animación */
+  animation: modalEntrance 0.3s ease-out forwards;
+}
+
+@keyframes modalEntrance {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.input-modal {
+  width: 90%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.input-modal::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.input-modal:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.4);
+}
+
+.button-modal {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 215, 0, 0.8),
+    /* Oro */ rgba(218, 165, 32, 0.8) /* Oro oscuro */
+  );
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-modal:hover {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 215, 0, 0.9),
+    rgba(218, 165, 32, 0.9)
+  );
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+}
+
+.h2-modal {
+  color: white;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.p-modal {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.span-modal {
+  color: rgba(255, 215, 0, 0.9); /* Dorado */
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.span-modal:hover {
+  color: rgba(255, 255, 0, 1); /* Amarillo brillante */
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+  text-decoration: underline;
+}
+/* Opcional: Añadir efecto de brillo sutil */
+@keyframes glow {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.modal-content::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 215, 0, 0.1),
+    transparent
+  );
+  z-index: -1;
+  animation: glow 3s infinite;
+  border-radius: 15px;
+}
+
+.close-btn-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #aaa;
+  transition: color 0.3s;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #aaa;
+}
+
+.close-btn-modal:hover {
+  color: rgba(255, 215, 0, 0.4); /* Cambiar color al pasar el cursor */
+}

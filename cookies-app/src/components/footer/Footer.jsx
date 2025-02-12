@@ -7,7 +7,7 @@ import fotoIconoMasterCard from "/images/icono-masterCard.png";
 import fotoIconoMercadoPago from "/images/icono-mercadoPago.png";
 import fotoIconoVisa from "/images/icono-visa.png";
 import { Link } from "react-router-dom";
-import { db } from "../../firebase.js";
+import { db } from "../../services/firebase.js";
 import { collection, addDoc } from "firebase/firestore";
 
 const Footer = () => {

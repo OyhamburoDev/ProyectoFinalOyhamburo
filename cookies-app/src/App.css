@@ -18,3 +18,14 @@ button:hover {
   transform: scale(1.05);
   opacity: 0.9;
 }
+.toast-custom {
+  background-color: #f8e8a6 !important;
+  color: #3e2723 !important;
+  font-weight: bold !important;
+  border-radius: 10px !important;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.toast-custom .Toastify__progress-bar {
+  background-color: #d2691e !important;
+}

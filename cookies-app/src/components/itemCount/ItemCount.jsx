@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import "./ItemCount.css";
 import { CartContext } from "../../context/CartContext";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ItemCount = ({ detalles }) => {
   const { agregarAlCarrito } = useContext(CartContext);
@@ -8,7 +10,26 @@ const ItemCount = ({ detalles }) => {
 
   const handleAgregar = () => {
     agregarAlCarrito(detalles, cantidad);
-    setCantidad(1);
+    toast.success(`${detalles.title} agregado al carrito!`, {
+      className: "toast-custom",
+      position: "bottom-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "light", // Puedes cambiar a "dark" si combina más con tu diseño
+      style: {
+        backgroundColor: "#F5DEB3", // Color pastel tipo galleta 🍪
+        color: "#4E342E", // Marrón oscuro para el texto
+        fontWeight: "bold",
+        borderRadius: "10px",
+        boxShadow: "0px 4px 10px rgba(0,0,0,0.1)",
+      },
+      progressStyle: {
+        backgroundColor: "#8B5A2B", // Un tono caramelo para la barra de progreso
+      },
+    });
   };
 
   const operacionResta = () => {

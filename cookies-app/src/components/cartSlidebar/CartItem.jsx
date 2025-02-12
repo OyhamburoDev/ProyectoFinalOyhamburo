@@ -2,9 +2,35 @@ import React from "react";
 import "./CartItem.css";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import { toast } from "react-toastify"; // 👈 Importamos toast
 
 const CartItem = ({ item, cantidad }) => {
   const { eliminarProducto } = useContext(CartContext);
+
+  const handleEliminar = () => {
+    eliminarProducto(item);
+    toast.error(`${item.title} eliminado del carrito`, {
+      className: "toast-custom",
+      position: "bottom-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "light",
+      style: {
+        backgroundColor: "#F8D7DA", // Rojo suave
+        color: "#721C24", // Rojo oscuro para el texto
+        fontWeight: "bold",
+        borderRadius: "10px",
+        boxShadow: "0px 4px 10px rgba(0,0,0,0.1)",
+      },
+      progressStyle: {
+        backgroundColor: "#C82333", // Rojo más fuerte para la barra de progreso
+      },
+    });
+  };
+
   return (
     <div className="cart-item">
       {" "}
@@ -36,7 +62,7 @@ const CartItem = ({ item, cantidad }) => {
           stroke="currentColor"
           color="black"
           className="size-6 icon-trash"
-          onClick={() => eliminarProducto(item)}
+          onClick={handleEliminar}
         >
           <path
             strokeLinecap="round"
