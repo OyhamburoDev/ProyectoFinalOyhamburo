@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from "react";
-import { auth } from "../services/firebase.js";
+import { auth, db } from "../services/firebase.js";
 import { onAuthStateChanged, signOut } from "firebase/auth";
+import { getDoc, doc } from "firebase/firestore";
 
 export const AuthContext = createContext();
 
@@ -8,8 +9,20 @@ export const AuthProvider = ({ children }) => {
   const [usuarioGuardado, setUsuarioGuardado] = useState(null);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUsuarioGuardado(user); // Guarda el usuario en el estado
+    const unsubscribe = onAuthStateChanged(auth, async (authUser) => {
+      if (authUser) {
+        const uid = authUser.uid;
+
+        const userDoc = await getDoc(doc(db, "users", uid));
+
+        if (userDoc) {
+          setUsuarioGuardado(userDoc.data());
+        } else {
+          setUsuarioGuardado(null);
+        }
+      } else {
+        setUsuarioGuardado(null);
+      }
     });
 
     return () => unsubscribe(); // Cancela la suscripción al desmontar
@@ -26,7 +39,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ usuarioGuardado }}>
+    <AuthContext.Provider value={{ usuarioGuardado, setUsuarioGuardado }}>
       {children}
     </AuthContext.Provider>
   );

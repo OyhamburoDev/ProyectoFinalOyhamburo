@@ -1,0 +1,44 @@
+.icon-buscar,
+.icon-like,
+.icon-carrito,
+.icon-usuario {
+  width: 1.6rem;
+  height: 1.6rem;
+  cursor: pointer;
+  color: white;
+}
+.icon-carrito {
+  position: relative;
+}
+
+.badge-icon .MuiBadge-badge {
+  top: -10px;
+  right: -1px;
+  min-width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff4444; /* Color sólido para el badge */
+  backdrop-filter: none; /* Elimina efecto de transparencia heredado */
+}
+
+.badge-icon .MuiBadge-badge {
+  /* ... */
+  background-color: #ff4444 !important; /* Fondo sólido */
+  border: 2px solid white; /* Opcional: borde para mejor contraste */
+}
+
+.user-icon-badge .MuiBadge-badge {
+  width: 20px; /* Aumenta el tamaño del badge */
+  height: 18px;
+  font-size: 13px;
+  color: #ff4444;
+  border: 2px solid white;
+  border-radius: 4px; /* Hace que los bordes sean cuadrados */
+  top: 2.5px;
+  right: 0px;
+}

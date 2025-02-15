@@ -10,6 +10,7 @@ const ItemCount = ({ detalles }) => {
 
   const handleAgregar = () => {
     agregarAlCarrito(detalles, cantidad);
+    setEstadoButton(true);
     toast.success(`${detalles.title} agregado al carrito!`, {
       className: "toast-custom",
       position: "bottom-right",
@@ -54,6 +55,7 @@ const ItemCount = ({ detalles }) => {
         <button className="count-btn" onClick={operacionSuma}>
           +
         </button>
+
         <button
           className="add-to-cart-btn"
           onClick={handleAgregar}

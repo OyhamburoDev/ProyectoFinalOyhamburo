@@ -3,6 +3,8 @@ import { useState, useContext } from "react";
 import { CartContext } from "../../context/CartContext.jsx";
 import { db } from "../../services/firebase.js";
 import { collection, addDoc, updateDoc, doc, getDoc } from "firebase/firestore";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Checkout = () => {
   const [nombre, setNombre] = useState("");
@@ -42,7 +44,7 @@ const Checkout = () => {
     };
 
     try {
-      Promise.all(
+      await Promise.all(
         orden.items.map(async (productoOrden) => {
           const productoRef = doc(db, "products", productoOrden.id);
           const productoDoc = await getDoc(productoRef);
@@ -51,11 +53,37 @@ const Checkout = () => {
           await updateDoc(productoRef, {
             stock: stockActual - productoOrden.cantidad,
           });
-          addDoc(collection(db, "ordenes"), orden).then((docRef) => {
-            setOrdenId(docRef.id);
-            vaciarCarrito();
-          });
         })
+      );
+
+      const docRef = await addDoc(collection(db, "ordenes"), orden);
+      setOrdenId(docRef.id);
+      vaciarCarrito();
+
+      toast.success(
+        `🎉 ¡Compra confirmada! Tu número de orden es: ${docRef.id}`,
+        {
+          className: "toast-confirmacion",
+          position: "top-center",
+          autoClose: false,
+          closeOnClick: false,
+          hideProgressBar: true,
+          draggable: false,
+          closeButton: true,
+          theme: "light",
+          style: {
+            backgroundColor: "#F5E1C0",
+            color: "#4E342E",
+            fontWeight: "bold",
+            fontSize: "18px",
+            textAlign: "center",
+            padding: "20px",
+            borderRadius: "12px",
+            boxShadow: "0px 6px 12px rgba(0,0,0,0.15)",
+            maxWidth: "400px",
+            margin: "10vh auto",
+          },
+        }
       );
     } catch (error) {
       console.error("❌ Error en el proceso de compra:", error);
@@ -113,9 +141,11 @@ const Checkout = () => {
             Confirmar compra
           </button>
           {ordenId && (
-            <strong className="order-thank-you">
-              ¡Gracias por tu compra! Tu número de orden es: {ordenId}
-            </strong>
+            <>
+              <strong className="order-thank-you">
+                ¡Gracias por tu compra! Tu número de orden es: {ordenId}
+              </strong>
+            </>
           )}
         </form>
       </div>

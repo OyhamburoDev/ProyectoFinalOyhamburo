@@ -1,0 +1,24 @@
+.navbar-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vh;
+}
+
+.navbar-title {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-subtitle {
+  font-size: 1rem;
+  color: #e38035;
+  margin-left: 0.5rem;
+}
+
+.navbar-crown {
+  font-size: 1.8rem;
+  color: #e38035;
+}

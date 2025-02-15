@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, doc, getDoc } from "firebase/firestore"; // Importa Firestore
+import { getFirestore, collection, getDocs, doc, getDoc, setDoc } from "firebase/firestore"; // Importa Firestore
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 
 
@@ -37,14 +37,36 @@ export const getElegirUnProducto = async (id)=> {
   })).find(producto => producto.id === id)
 }
 
+// Función para obtener productos de Firestore
+export const getUsers = async ()=> {
+  const productsCollection = collection(db, 'users');
+  const snapshot = await getDocs(productsCollection);
+  return snapshot.docs.map(doc => ({
+    id: doc.id,
+    ...doc.data()
+  }))
+}
+
 // Función para registrar un usuario en firabase Auth
-export const registerUser = async (email, password)=>{
+export const registerUser = async (email, password, name)=>{
   try{
 const userCredential = await createUserWithEmailAndPassword(auth, email, password);
 console.log("Usuario registrado", userCredential.user)
-console.log("Detalles del usuario:", userCredential)
+console.log("lo ultimo", userCredential)
+
+ // Asegúrate de que userCredential tiene un UID
+ console.log("UID del usuario:", userCredential.user.uid);
+
+await setDoc(doc(db, "users", userCredential.user.uid), {
+  name: name,
+  email: email,
+  uid: userCredential.user.uid
+      });
+
+console.log("Usuario registrado con éxito");
   }catch(error){
     console.error("Error registrando el usuario", error);
+    throw error; // Añade esto para propagar el error
   }
 }
 
@@ -54,8 +76,23 @@ try{
 const userCredential = await signInWithEmailAndPassword(auth, email, password);
 console.log("Usuario atenticado:", userCredential.user);
 return userCredential.user;
+
 }catch(error){
-console.error("Error al iniciar sesión", error.message);
-return null;
+throw error;
 }
 };
+
+// Función para traer el usuario de fireStore
+
+export const getUserFromFirestore = async (uid) => {
+  try{
+const userDoc = await getDoc(doc(db, "users", uid));
+if(userDoc.exists()){
+  return userDoc.data();
+}else {
+  throw new Error ("El usuario no existe en Firestore")
+}
+  }catch(error){
+    throw error;
+  }
+}

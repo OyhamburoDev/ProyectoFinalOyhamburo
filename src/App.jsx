@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./App.css";
 import "./index.css";
 import Home from "./components/pages/home/Home";
-import NavBar from "./components/navbar/Navbar";
+import NavBar from "./components/navbar/navbarContainer/Navbar.jsx";
 import Footer from "./components/footer/Footer";
 import ItemListContainer from "./components/itemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/itemDetailContainer/ItemDetailContainer.jsx";

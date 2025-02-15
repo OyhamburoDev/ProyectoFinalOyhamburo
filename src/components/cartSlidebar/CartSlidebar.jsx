@@ -1,8 +1,8 @@
 import React from "react";
-import "./CartSlidebar.css";
+import "../cartSlidebar/CartSlidebar.css";
 import { CartContext } from "../../context/CartContext";
-import CartItemList from "./CartItemList";
-import CartTotal from "./CartTotal";
+import CartItemList from "../cartSlidebar/CartItemList";
+import CartTotal from "../cartSlidebar/CartTotal";
 import { useContext } from "react";
 import { useState, useEffect, useRef } from "react";
 

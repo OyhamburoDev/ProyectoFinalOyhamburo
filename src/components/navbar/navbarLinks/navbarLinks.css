@@ -1,0 +1,23 @@
+.navbar-links {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  width: 100vh;
+}
+.navbar-list {
+  display: flex;
+  gap: 2rem;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.navbar-list li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-list li a:hover {
+  color: #e38035;
+}

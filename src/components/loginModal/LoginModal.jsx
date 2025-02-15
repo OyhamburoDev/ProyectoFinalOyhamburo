@@ -1,36 +1,48 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./LoginModal.css";
 import { registerUser, loginUser } from "../../services/firebase.js";
+import { AuthContext } from "../../context/AuthContext.jsx";
 
 const LoginModal = ({ show, onClose }) => {
   const [isLogin, setIsLogin] = useState(true); // Estado para alternar entre login y registro
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { setUsuarioGuardado } = useContext(AuthContext);
+  const [name, setName] = useState("");
+  const [error, setError] = useState("");
 
   const handleLogin = async () => {
-    // Aquí va la lógica para hacer login
     try {
-      const user = await loginUser(email, password);
+      const authUser = await loginUser(email, password);
 
-      if (user) {
-        console.log("Login with", email, password);
-        onClose();
-      } else {
-        console.log("Error en el login, usuario no válido");
-      }
+      const uid = authUser.id;
+      console.log("ver esto,", authUser);
+      const firestoreUser = await getUserFromFirestore(uid);
+
+      setUsuarioGuardado(firestoreUser);
+
+      console.log("Login exitoso, Usurio de firestore: ", firestoreUser);
     } catch (error) {
-      console.log("no se puede acceder");
+      console.error("Error en login:", error.message);
     }
   };
 
   const handleRegister = async () => {
     // Aquí va la lógica para registrar un nuevo usuario
+
+    if (!email) {
+      setError("Por favor ingresa un correo");
+      return;
+    } else if (!password) {
+      setError(error.message);
+      return;
+    }
     try {
-      await registerUser(email, password);
+      await registerUser(email, password, name);
       console.log("Register with", email, password);
       onClose();
     } catch (error) {
-      console.log("error al registrar", error.message);
+      console.log("Error al registrar:", error.message);
     }
   };
 
@@ -45,7 +57,17 @@ const LoginModal = ({ show, onClose }) => {
           &times;
         </span>
         <h2 className="h2-modal">{isLogin ? "Login" : "Register"}</h2>
-
+        {!isLogin ? (
+          <input
+            type="name"
+            placeholder="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="input-modal"
+          />
+        ) : (
+          <></>
+        )}
         <input
           type="email"
           placeholder="Email"
@@ -79,6 +101,7 @@ const LoginModal = ({ show, onClose }) => {
           </>
         ) : (
           <>
+            {error && <p className="error-message">{error}</p>}
             <button className="button-modal" onClick={handleRegister}>
               Sign Up
             </button>

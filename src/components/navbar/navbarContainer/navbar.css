@@ -1,0 +1,13 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 5rem;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo con transparencia */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px); /* Fondo desenfocado */
+  padding: 0 2rem;
+  transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+}
