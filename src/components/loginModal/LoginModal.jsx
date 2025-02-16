@@ -4,13 +4,13 @@ import { registerUser, loginUser } from "../../services/firebase.js";
 import { AuthContext } from "../../context/AuthContext.jsx";
 
 const LoginModal = ({ show, onClose }) => {
-  const [isLogin, setIsLogin] = useState(true); // Estado para alternar entre login y registro
+  const [isLogin, setIsLogin] = useState(false); // Estado para alternar entre login y registro
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { setUsuarioGuardado } = useContext(AuthContext);
   const [name, setName] = useState("");
   const [error, setError] = useState("");
-
+  console.log(password);
   const handleLogin = async () => {
     try {
       const authUser = await loginUser(email, password);
@@ -28,13 +28,14 @@ const LoginModal = ({ show, onClose }) => {
   };
 
   const handleRegister = async () => {
-    // Aquí va la lógica para registrar un nuevo usuario
-
+    setError("");
     if (!email) {
       setError("Por favor ingresa un correo");
       return;
-    } else if (!password) {
-      setError(error.message);
+    }
+    if (!password) {
+      setError("La contraseña debe tener al menos 6 caracteres");
+
       return;
     }
     try {
