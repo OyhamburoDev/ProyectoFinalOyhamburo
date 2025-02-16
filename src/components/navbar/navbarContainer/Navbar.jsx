@@ -6,17 +6,15 @@ import CartSidebar from "../../cartSlidebar/CartSlidebar.jsx";
 import { useState } from "react";
 
 function Navbar() {
-  const [isCartOpen, setIsCartOpen] = useState(false);
-
   return (
     <>
       <div className="navbar">
         <NavbarLogo />
         <NavbarLinks />
-        <NavbarIcons toggleCart={() => setIsCartOpen(!isCartOpen)} />
+        <NavbarIcons />
       </div>
 
-      <CartSidebar isCartOpen={isCartOpen} setIsCartOpen={setIsCartOpen} />
+      <CartSidebar />
     </>
   );
 }

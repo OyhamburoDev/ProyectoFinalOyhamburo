@@ -6,9 +6,9 @@ import CartTotal from "../cartSlidebar/CartTotal";
 import { useContext } from "react";
 import { useState, useEffect, useRef } from "react";
 
-const CartSidebar = ({ isCartOpen, setIsCartOpen }) => {
+const CartSidebar = () => {
   // Usamos el useRef para el contenedor del carrito
-  const { carrito, total } = useContext(CartContext); // Accedemos al carrito desde el contexto
+  const { carrito, total, isCartOpen, setIsCartOpen } = useContext(CartContext); // Accedemos al carrito desde el contexto
   const cartRef = useRef(null);
 
   useEffect(() => {

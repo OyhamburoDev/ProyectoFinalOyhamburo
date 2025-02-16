@@ -1,27 +1,23 @@
 import { useState, createContext } from "react";
 
-// 1. Crear Contexto con valores iniciales
 export const CartContext = createContext({
   carrito: [],
   total: 0,
   cantidadTotal: 0,
-  actualizarCantidad: () => {}, // Función para actualizar la cantidad
+  actualizarCantidad: () => {},
 });
 
-// 2. Proveedor del contexto (wrapper principal)
 export const CarritoProvider = ({ children }) => {
-  // Estados del carrito
-  const [carrito, setCarrito] = useState([]); // Almacena los productos
-  const [total, setTotal] = useState(0); // Total monetario
-  const [cantidadTotal, setCantidadTotal] = useState(0); // Cantidad de ítems
-  const [cantidadSeleccionada, setCantidadSeleccionada] = useState(1); // Cantidad seleccionada
+  const [carrito, setCarrito] = useState([]);
+  const [total, setTotal] = useState(0);
+  const [cantidadTotal, setCantidadTotal] = useState(0);
+  const [cantidadSeleccionada, setCantidadSeleccionada] = useState(1);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
-  // Función para actualizar la cantidad seleccionada
   const actualizarCantidad = (nuevaCantidad) => {
     setCantidadSeleccionada(nuevaCantidad);
   };
 
-  // 3. Función para agregar productos al carrito
   const agregarAlCarrito = (item, cantidad) => {
     const productoExistente = carrito.find((prod) => prod.item.id === item.id);
 
@@ -60,14 +56,12 @@ export const CarritoProvider = ({ children }) => {
     );
   };
 
-  // 5. Función para vaciar completamente el carrito
   const vaciarCarrito = () => {
     setCarrito([]);
     setTotal(0);
     setCantidadTotal(0);
   };
 
-  // 6. Proveemos el contexto a toda la app
   return (
     <CartContext.Provider
       value={{
@@ -79,6 +73,8 @@ export const CarritoProvider = ({ children }) => {
         agregarAlCarrito,
         eliminarProducto,
         vaciarCarrito,
+        isCartOpen,
+        setIsCartOpen,
       }}
     >
       {children}

@@ -1,16 +1,26 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./ItemCount.css";
 import { CartContext } from "../../context/CartContext";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const ItemCount = ({ detalles }) => {
-  const { agregarAlCarrito } = useContext(CartContext);
+  const { agregarAlCarrito, carrito, isCartOpen, setIsCartOpen } =
+    useContext(CartContext);
   const [cantidad, setCantidad] = useState(1); // Mover cantidad a estado local
+  const [isInCart, setIsInCart] = useState(false);
 
-  const handleAgregar = () => {
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
+  useEffect(() => {
+    const exists = carrito.some((item) => item.item.id === detalles.id);
+    setIsInCart(exists);
+  }, [carrito, detalles.id]);
+
+  const handleAgregar = async () => {
     agregarAlCarrito(detalles, cantidad);
-    setEstadoButton(true);
     toast.success(`${detalles.title} agregado al carrito!`, {
       className: "toast-custom",
       position: "bottom-right",
@@ -48,21 +58,29 @@ const ItemCount = ({ detalles }) => {
   return (
     <>
       <div className="item-cnt">
-        <button className="count-btn" onClick={operacionResta}>
-          -
-        </button>
-        <span className="count-num">{cantidad}</span>
-        <button className="count-btn" onClick={operacionSuma}>
-          +
-        </button>
+        {!isInCart ? (
+          <>
+            <button className="count-btn" onClick={operacionResta}>
+              -
+            </button>
+            <span className="count-num">{cantidad}</span>
+            <button className="count-btn" onClick={operacionSuma}>
+              +
+            </button>
 
-        <button
-          className="add-to-cart-btn"
-          onClick={handleAgregar}
-          disabled={detalles.stock === 0}
-        >
-          Agregar al carrito
-        </button>
+            <button
+              className="add-to-cart-btn"
+              onClick={handleAgregar}
+              disabled={detalles.stock === 0}
+            >
+              Agregar al carrito
+            </button>
+          </>
+        ) : (
+          <button className="add-to-cart-btn" onClick={toggleCart}>
+            Ir al carrito
+          </button>
+        )}
       </div>
     </>
   );

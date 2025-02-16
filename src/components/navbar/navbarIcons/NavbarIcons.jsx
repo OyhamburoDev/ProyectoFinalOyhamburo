@@ -5,13 +5,13 @@ import IconLike from "./likeIcon/IconLike.jsx";
 import CartIcon from "./cartIcon/CartIcon.jsx";
 import UserIcon from "./userIcon/UserIcon.jsx";
 
-const NavbarIcons = ({ toggleCart }) => {
+const NavbarIcons = () => {
   return (
     <>
       <div className="navbar-icons">
         <SearchIcon />
         <IconLike />
-        <CartIcon toggleCart={toggleCart} />
+        <CartIcon />
         <UserIcon />
       </div>
     </>

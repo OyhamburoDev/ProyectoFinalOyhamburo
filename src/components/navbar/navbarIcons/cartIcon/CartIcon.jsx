@@ -5,8 +5,12 @@ import Badge from "@mui/material/Badge";
 
 import "./cartIcon.css";
 
-const CartIcon = ({ toggleCart }) => {
-  const { cantidadTotal } = useContext(CartContext);
+const CartIcon = () => {
+  const { cantidadTotal, isCartOpen, setIsCartOpen } = useContext(CartContext);
+
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
 
   return (
     <>
