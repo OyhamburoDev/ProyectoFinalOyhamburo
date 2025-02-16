@@ -1,53 +1,31 @@
 # 🍪 Tienda Cookies Premium 🍪
 
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react)](https://react.dev/)
+[![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase)](https://firebase.google.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel)](https://vercel.com/)
+
 ## 📌 Descripción
 
-Tienda Cookies Premium es un e-commerce desarrollado con React.js donde los usuarios pueden ver una lista de productos disponibles, agregarlos al carrito, registrarse en la página y finalizar su compra. Toda la información se almacena en una base de datos en Firebase. 🚀
+E-commerce de galletas premium desarrollado con React.js y Firebase. Los usuarios pueden:
+- 👀 Explorar productos en stock
+- 🛒 Agregar items al carrito
+- 🔐 Registrarse/iniciar sesión
+- 🧾 Generar órdenes de compra guardadas en Firestore
 
-## 🛠️ Tecnologías utilizadas
+🚀 **Demo**: [https://cookies-premium.vercel.app/](https://cookies-premium.vercel.app/)
 
-- ⚡ Vite
-- ⚛️ React.js
-- 🔄 React Router DOM
-- 🔥 Firebase
-- 🔑 Firebase Auth
-- 🍞 React Toastify
-- 🎨 Material UI (MUI)
+![Demo de la app](https://raw.githubusercontent.com/OyhamburoDev/ProyectoFinalOyhamburo/main/gif-redme.gif)
 
-## ✨ Funcionalidades
-
-- 📋 Ver una lista de productos disponibles según el stock.
-- 🛒 Agregar productos al carrito de compras.
-- 👤 Registrarse en la página.
-- 🧾 Ver la orden de compra y almacenarla en la base de datos.
-- 🔐 Autenticación de usuarios con Firebase Auth.
-- ☁️ Al registrarse o suscribirse, la información del usuario se almacena en Firestore, permitiendo una mejor experiencia dentro de la página.
+## 🛠️ Tech Stack
+- **Frontend**: React.js + Vite ⚡
+- **Routing**: React Router DOM 🔄
+- **BaaS**: Firebase 🔥 (Auth 🔑, Firestore ☁️)
+- **UI**: Material UI 🎨
+- **Notifications**: React Toastify 🍞
 
 ## 🚀 Instalación
-
-Sigue estos pasos para instalar y ejecutar el proyecto en tu máquina local:
-
-1. 🖥️ Clona el repositorio:
-   ```sh
-   git clone https://github.com/tu-usuario/tu-repositorio.git
-   ```
-2. 📂 Abre la terminal y navega hasta el directorio del proyecto:
-   ```sh
-   cd nombre-del-proyecto
-   ```
-3. 📦 Instala las dependencias necesarias:
-   ```sh
-   npm install
-   ```
-4. ▶️ Inicia la aplicación en modo desarrollo:
-   ```sh
-   npm run dev
-   ```
-5. 🌐 Abre tu navegador y accede a la aplicación en:
-   ```sh
-   http://localhost:5173
-   ```
-
-## 🌍 Despliegue
-
-El proyecto está desplegado en **Vercel** para facilitar el acceso y las actualizaciones.
+```sh
+git clone https://github.com/OyhamburoDev/ProyectoFinalOyhamburo.git
+cd ProyectoFinalOyhamburo
+npm install
+npm run dev
