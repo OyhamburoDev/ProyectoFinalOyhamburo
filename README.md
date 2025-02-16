@@ -4,6 +4,9 @@
 
 Tienda Cookies Premium es un e-commerce desarrollado con React.js donde los usuarios pueden ver una lista de productos disponibles, agregarlos al carrito, registrarse en la página y finalizar su compra. Toda la información se almacena en una base de datos en Firebase. 🚀
 
+![Mi página en acción](cookies-premium/gif-redme.gif)
+
+
 ## 🛠️ Tecnologías utilizadas
 
 - ⚡ Vite
