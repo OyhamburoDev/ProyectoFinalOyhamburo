@@ -12,7 +12,7 @@ import { collection, addDoc } from "firebase/firestore";
 
 const Footer = () => {
   const handleGoHome = () => {
-    window.scrollTo(0, 0); // Desplazar al inicio de la página
+    window.scrollTo(0, 0);
   };
 
   const [email, setEmail] = useState("");

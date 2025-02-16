@@ -10,18 +10,13 @@ const LoginModal = ({ show, onClose }) => {
   const { setUsuarioGuardado } = useContext(AuthContext);
   const [name, setName] = useState("");
   const [error, setError] = useState("");
-  console.log(password);
+
   const handleLogin = async () => {
     try {
       const authUser = await loginUser(email, password);
-
       const uid = authUser.id;
-      console.log("ver esto,", authUser);
       const firestoreUser = await getUserFromFirestore(uid);
-
       setUsuarioGuardado(firestoreUser);
-
-      console.log("Login exitoso, Usurio de firestore: ", firestoreUser);
     } catch (error) {
       console.error("Error en login:", error.message);
     }
@@ -29,21 +24,24 @@ const LoginModal = ({ show, onClose }) => {
 
   const handleRegister = async () => {
     setError("");
-    if (!email) {
-      setError("Por favor ingresa un correo");
+
+    if (!name) {
+      setError("Por favor ingresa tu nombre");
       return;
     }
-    if (!password) {
-      setError("La contraseña debe tener al menos 6 caracteres");
 
+    if (!email.includes("@") || !email.includes(".")) {
+      setError("Ingresa un correo electronico válido");
       return;
+    }
+    if (password.length < 6) {
+      return setError("La contraseña debe tener al menos 6 caracteres");
     }
     try {
       await registerUser(email, password, name);
-      console.log("Register with", email, password);
       onClose();
     } catch (error) {
-      console.log("Error al registrar:", error.message);
+      setError(error.message || "Error al registrar usuario");
     }
   };
 

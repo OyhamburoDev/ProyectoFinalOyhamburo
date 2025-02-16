@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, doc, getDoc, setDoc } from "firebase/firestore"; // Importa Firestore
+import { getFirestore, collection, getDocs, doc, getDoc, setDoc } from "firebase/firestore"; 
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 
 
@@ -47,34 +47,27 @@ export const getUsers = async ()=> {
   }))
 }
 
+
 // Función para registrar un usuario en firabase Auth
 export const registerUser = async (email, password, name)=>{
   try{
+
 const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-console.log("Usuario registrado", userCredential.user)
-console.log("lo ultimo", userCredential)
-
- // Asegúrate de que userCredential tiene un UID
- console.log("UID del usuario:", userCredential.user.uid);
-
 await setDoc(doc(db, "users", userCredential.user.uid), {
   name: name,
   email: email,
   uid: userCredential.user.uid
       });
-
-console.log("Usuario registrado con éxito");
   }catch(error){
-    console.error("Error registrando el usuario", error);
     throw error; // Añade esto para propagar el error
   }
 }
+
 
 // Función para hacer un login
 export const loginUser = async (email, password)=>{
 try{
 const userCredential = await signInWithEmailAndPassword(auth, email, password);
-console.log("Usuario atenticado:", userCredential.user);
 return userCredential.user;
 
 }catch(error){
@@ -82,8 +75,8 @@ throw error;
 }
 };
 
-// Función para traer el usuario de fireStore
 
+// Función para traer el usuario de fireStore
 export const getUserFromFirestore = async (uid) => {
   try{
 const userDoc = await getDoc(doc(db, "users", uid));

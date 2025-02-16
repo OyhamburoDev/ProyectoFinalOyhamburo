@@ -12,6 +12,8 @@
   z-index: 1100;
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 10px 0 0 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .cart-sidebar.open {
@@ -28,13 +30,13 @@
   font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 1rem;
 }
 
 .h2-icon-close {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 10vh;
 }
 
 .icon-close {
@@ -51,7 +53,7 @@
 
 .cart-items-list {
   overflow-y: auto;
-  max-height: 25rem;
+  height: 50vh;
   padding-right: 0.5rem;
 }
 
@@ -104,4 +106,8 @@
 
 .button-pagar:hover {
   background-color: #d4af37;
+}
+
+.drawer-footer {
+  height: 40vh;
 }

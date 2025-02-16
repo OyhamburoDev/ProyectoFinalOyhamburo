@@ -28,15 +28,15 @@ export const AuthProvider = ({ children }) => {
     return () => unsubscribe(); // Cancela la suscripción al desmontar
   }, []);
 
-  // Función para cerrar sesión
-  const cerrarSesion = async () => {
-    try {
-      await signOut(auth);
-      setUsuarioGuardado(null); // Borra el usuario del estado
-    } catch (error) {
-      console.error("Error al cerrar sesión", error);
-    }
-  };
+  // // Función para cerrar sesión
+  // const cerrarSesion = async () => {
+  //   try {
+  //     await signOut(auth);
+  //     setUsuarioGuardado(null); // Borra el usuario del estado
+  //   } catch (error) {
+  //     console.error("Error al cerrar sesión", error);
+  //   }
+  // };
 
   return (
     <AuthContext.Provider value={{ usuarioGuardado, setUsuarioGuardado }}>

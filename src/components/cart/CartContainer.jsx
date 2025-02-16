@@ -1,10 +1,10 @@
 import React from "react";
-import "../cartSlidebar/CartSlidebar.css";
+import "../cart/CartContainer.css";
 import { CartContext } from "../../context/CartContext";
-import CartItemList from "../cartSlidebar/CartItemList";
-import CartTotal from "../cartSlidebar/CartTotal";
+import CartItemList from "../cart/CartItemList";
+import CartTotal from "../cart/CartTotal";
 import { useContext } from "react";
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const CartSidebar = () => {
   // Usamos el useRef para el contenedor del carrito

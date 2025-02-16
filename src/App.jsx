@@ -14,7 +14,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [showModal, setShowModal] = useState(true);
-
   const closeModal = () => {
     setShowModal(false);
   };

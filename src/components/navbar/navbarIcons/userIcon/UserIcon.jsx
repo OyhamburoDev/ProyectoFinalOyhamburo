@@ -19,10 +19,9 @@ const UserIcon = () => {
   const handleClose = () => {
     setAnchorEl(null);
     setMostrarPoper(false);
-    console.log("esto pasa cuando hago clic", mostrarPoper);
   };
 
-  const open = Boolean(anchorEl);
+  const open = Boolean(anchorEl) && mostrarPoper;
   const id = open ? "simple-popover" : undefined;
 
   return (
@@ -55,7 +54,6 @@ const UserIcon = () => {
               open={open}
               anchorEl={anchorEl}
               onClose={handleClose}
-              invisible={mostrarPoper ? true : undefined}
               anchorOrigin={{
                 vertical: "bottom",
                 horizontal: "center",
