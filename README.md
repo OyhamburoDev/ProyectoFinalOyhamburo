@@ -12,7 +12,7 @@ E-commerce de galletas premium desarrollado con React.js y Firebase. Los usuario
 - 🔐 Registrarse/iniciar sesión
 - 🧾 Generar órdenes de compra guardadas en Firestore
 
-🚀 **Demo en vivo**: [https://tienda-cookies.vercel.app](https://tienda-cookies.vercel.app)
+🚀 **Demo**: [https://cookies-premium.vercel.app/](https://cookies-premium.vercel.app/)
 
 ![Demo de la app](https://raw.githubusercontent.com/OyhamburoDev/ProyectoFinalOyhamburo/main/gif-redme.gif)
 
