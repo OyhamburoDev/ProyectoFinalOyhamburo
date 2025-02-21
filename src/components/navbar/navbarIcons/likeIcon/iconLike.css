@@ -7,3 +7,9 @@
   cursor: pointer;
   color: white;
 }
+/* 📱 Pequeño (smartphones estándar) */
+@media (max-width: 480px) {
+  .icon-like {
+    display: none;
+  }
+}

@@ -9,8 +9,12 @@ function Navbar() {
     <>
       <div className="navbar">
         <NavbarLogo />
-        <NavbarLinks />
+        <NavbarLinks className="desktop-links" />
         <NavbarIcons />
+      </div>
+
+      <div className="mobile-menu">
+        <NavbarLinks className="mobile-links" />
       </div>
 
       <CartSidebar />

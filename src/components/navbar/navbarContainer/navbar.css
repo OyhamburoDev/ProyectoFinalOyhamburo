@@ -10,4 +10,37 @@
   backdrop-filter: blur(10px); /* Fondo desenfocado */
   padding: 0 2rem;
   transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* 📱 Pequeño (smartphones estándar) */
+@media (max-width: 480px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+    width: 100%;
+    padding-left: 1.3rem;
+  }
+  .navbar-links.desktop-links {
+    display: none !important;
+  }
+  /* Muestra el menú móvil */
+  .mobile-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo con transparencia */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Fondo desenfocado */
+    padding: 0 2rem;
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  }
 }

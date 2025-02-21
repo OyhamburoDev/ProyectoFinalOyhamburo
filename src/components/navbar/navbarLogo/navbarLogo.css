@@ -22,3 +22,27 @@
   font-size: 1.8rem;
   color: #e38035;
 }
+
+/* 📱 Pequeño (smartphones estándar) */
+@media (max-width: 480px) {
+  .navbar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .navbar-title {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    margin-left: 0px;
+  }
+  .navbar-subtitle {
+    font-size: 1rem;
+    color: #e38035;
+  }
+  .navbar-crown {
+    font-size: 1.6rem;
+    color: #e38035;
+  }
+}

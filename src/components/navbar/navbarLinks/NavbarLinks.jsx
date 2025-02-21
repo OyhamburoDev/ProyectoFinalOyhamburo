@@ -2,13 +2,13 @@ import React from "react";
 import "./navbarLinks.css";
 import { Link } from "react-router-dom";
 
-const NavbarLinks = () => {
+const NavbarLinks = ({ className }) => {
   const handleGoHome = () => {
     window.scrollTo(0, 0); // Desplazar al inicio de la página
   };
 
   return (
-    <div className="navbar-links">
+    <div className={`navbar-links ${className}`}>
       <ul className="navbar-list">
         <li>
           <Link to="/" onClick={handleGoHome}>
