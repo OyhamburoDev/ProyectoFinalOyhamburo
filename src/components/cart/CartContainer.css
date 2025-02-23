@@ -119,7 +119,7 @@
     width: 20rem;
     height: 100%;
     background: rgba(255, 255, 255, 0.95); /* Transparencia ligera */
-    backdrop-filter: blur(10px); /* Desenfoque elegante */
+    backdrop-filter: none;
     transition: right 0.3s ease-in-out;
     box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.3);
     right: -25rem;

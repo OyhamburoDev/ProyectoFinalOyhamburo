@@ -33,9 +33,11 @@
 
 @media (max-width: 480px) {
   .cnt-item-detail-container {
-    height: auto;
-    min-height: 100vh;
-    padding: 1rem 0;
+    margin: 0;
+    height: auto; /* Altura completa de la pantalla */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
   }
 
   .p-loading {

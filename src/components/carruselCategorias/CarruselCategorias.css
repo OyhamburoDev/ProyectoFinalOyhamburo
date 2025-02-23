@@ -145,7 +145,7 @@
 
   .contenedor-tarjetas {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 3rem;
     padding: 0 1rem;
   }
 
