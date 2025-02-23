@@ -30,3 +30,21 @@
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 480px) {
+  .cnt-item-detail-container {
+    height: auto;
+    min-height: 100vh;
+    padding: 1rem 0;
+  }
+
+  .p-loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: auto;
+    padding: 2rem;
+  }
+}

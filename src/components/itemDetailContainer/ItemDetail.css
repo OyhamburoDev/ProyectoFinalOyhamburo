@@ -10,6 +10,7 @@
   border-radius: 15px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
   height: 18rem;
+  transition: all 0.3s ease; /* <- Aquí va la transición */
 }
 
 .cnt-img {
@@ -100,4 +101,54 @@
 .item-count-wrapper button:focus {
   outline: none;
   box-shadow: 0px 0px 10px rgba(212, 175, 55, 0.8);
+}
+
+@media (max-width: 480px) {
+  .cnt-item-detail {
+    flex-direction: column;
+    width: 95%;
+    margin: 2rem auto;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .cnt-img {
+    max-width: 100%;
+    height: 250px;
+    margin-bottom: 1rem;
+  }
+
+  .cnt-title-price {
+    padding: 0 0.5rem;
+    width: 100%;
+  }
+
+  .title-item-detail {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .price-item-detail {
+    font-size: 1.2rem;
+  }
+
+  .stock-item-detail {
+    font-size: 1rem;
+  }
+
+  .p-item-detail {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .item-count-wrapper {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .item-count-wrapper button {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
 }

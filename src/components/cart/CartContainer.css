@@ -111,3 +111,22 @@
 .drawer-footer {
   height: 40vh;
 }
+/* Media query para móvil */
+@media (max-width: 480px) {
+  .cart-sidebar {
+    position: fixed;
+    top: 0;
+    width: 20rem;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95); /* Transparencia ligera */
+    backdrop-filter: blur(10px); /* Desenfoque elegante */
+    transition: right 0.3s ease-in-out;
+    box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.3);
+    right: -25rem;
+    z-index: 1100;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}

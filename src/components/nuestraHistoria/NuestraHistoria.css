@@ -82,3 +82,61 @@
   position: relative;
   box-shadow: 15px 15px 0 var(--color-acento);
 }
+/* Media query para móvil */
+@media (max-width: 480px) {
+  .historia-luxury {
+    padding: 3rem 1.5rem;
+    padding-bottom: 5rem;
+  }
+
+  .contenedor-historia {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .columna-textos,
+  .columna-imagen {
+    width: 100%;
+  }
+
+  .columna-textos h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .destacado {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .linea-separadora {
+    margin: 1.5rem 0;
+    width: 60px;
+  }
+
+  .descripcion {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .boton-saber-mas {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    justify-content: center;
+  }
+
+  .marco-imagen {
+    height: 20rem;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    box-shadow: 8px 8px 0 var(--color-acento);
+  }
+
+  .icono-flecha {
+    margin-left: 0.5rem;
+  }
+}

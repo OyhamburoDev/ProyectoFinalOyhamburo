@@ -167,3 +167,11 @@
 .close-btn-modal:hover {
   color: rgba(255, 215, 0, 0.4); /* Cambiar color al pasar el cursor */
 }
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 80%; /* Ocupará el 90% del ancho de la pantalla */
+    max-width: 350px; /* Máximo ancho permitido */
+    padding: 1.5rem; /* Reducir padding en móvil */
+  }
+}

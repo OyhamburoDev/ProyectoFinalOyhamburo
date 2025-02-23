@@ -8,12 +8,7 @@ import BannerHome from "../../bannerHome/BannerHome.jsx";
 
 function Home() {
   return (
-    <main
-      style={{
-        backgroundColor: "#ffff",
-        height: "143rem",
-      }}
-    >
+    <main className="main-home">
       <BannerHome />
       <CarruselCategorias />
       <BannerPromocional />

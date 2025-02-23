@@ -6,19 +6,15 @@ import CartSidebar from "../../cart/CartContainer.jsx";
 
 function Navbar() {
   return (
-    <>
+    <div className="navbar-container">
       <div className="navbar">
         <NavbarLogo />
         <NavbarLinks className="desktop-links" />
         <NavbarIcons />
       </div>
 
-      <div className="mobile-menu">
-        <NavbarLinks className="mobile-links" />
-      </div>
-
       <CartSidebar />
-    </>
+    </div>
   );
 }
 

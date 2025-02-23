@@ -6,3 +6,21 @@
 .count-num {
   color: #fff;
 }
+
+@media (max-width: 480px) {
+  .item-cnt {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .count-btn,
+  .add-to-cart-btn {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .count-num {
+    font-size: 1.2rem;
+  }
+}

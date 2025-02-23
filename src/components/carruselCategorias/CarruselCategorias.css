@@ -128,3 +128,48 @@
 .contenido-tarjeta p {
   color: #f3cc4b;
 }
+
+/* Media query para móvil */
+@media (max-width: 480px) {
+  .carrusel-luxury {
+    padding: 1rem 1rem 4rem;
+  }
+
+  .encabezado h2 {
+    font-size: 2rem;
+  }
+
+  .encabezado p {
+    font-size: 0.9rem;
+  }
+
+  .contenedor-tarjetas {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .tarjeta-categoria {
+    width: 100%;
+    max-width: 300px;
+    height: 16rem;
+  }
+
+  .contenido-tarjeta {
+    padding: 1.5rem;
+  }
+
+  .contenido-tarjeta h3 {
+    font-size: 1.3rem;
+  }
+
+  .contenido-tarjeta p {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .boton-vermas {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}

@@ -4,6 +4,7 @@ import SearchIcon from "./searchIcon/SearchIcon.jsx";
 import IconLike from "./likeIcon/IconLike.jsx";
 import CartIcon from "./cartIcon/CartIcon.jsx";
 import UserIcon from "./userIcon/UserIcon.jsx";
+import HamburgerMenu from "./hamburgerIcon/HamburgerMenu.jsx";
 
 const NavbarIcons = () => {
   return (
@@ -13,6 +14,7 @@ const NavbarIcons = () => {
         <IconLike />
         <CartIcon />
         <UserIcon />
+        <HamburgerMenu />
       </div>
     </>
   );

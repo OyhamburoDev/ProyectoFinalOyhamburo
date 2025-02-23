@@ -15,18 +15,20 @@ const BannerHome = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1>Lujo en Cada Bocado</h1>
-          <p>Descubre nuestra colección exclusiva de galletas premium.</p>
+          <h2 className="banner-home-title">Lujo en Cada Bocado</h2>
+          <p className="banner-home-subtitle">
+            Descubre nuestra colección exclusiva de galletas premium.
+          </p>
 
           {/* Botones con efecto hover */}
-          <div className="buttons">
+          <div className="buttonsBanner">
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <Link to="/coleccion" className="btn primary">
+              <Link to="/coleccion" className="btn primary buttonOne">
                 Explorar
               </Link>
             </motion.div>
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <Link to="/nosotros" className="btn secondary">
+              <Link to="/nosotros" className="btn secondary buttonTwo">
                 Conócenos
               </Link>
             </motion.div>

@@ -41,7 +41,7 @@
   align-items: center;
 }
 
-h1 {
+.banner-home-title {
   font-size: 3.5rem;
   font-weight: bold;
   color: var(--dorado);
@@ -49,13 +49,13 @@ h1 {
   margin-top: 0px;
 }
 
-p {
+.banner-home-subtitle {
   font-size: 1.2rem;
   color: var(--gris);
   margin-bottom: 2rem;
 }
 
-.buttons {
+.buttonsBanner {
   display: flex;
   gap: 1rem;
 }
@@ -114,7 +114,8 @@ p {
   .banner-home {
     height: auto;
     height: 40rem;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
+
     background-position: 65% center;
   }
 
@@ -129,29 +130,40 @@ p {
     order: 2;
   }
 
-  h1 {
+  .banner-home-title {
     font-size: 2.5rem;
     line-height: 1.2;
     margin-bottom: 1rem;
   }
 
-  p {
+  .banner-home-subtitle {
     font-size: 1rem;
     margin-bottom: 1.5rem;
     padding: 0 1rem;
   }
 
-  .buttons {
-    flex-direction: column;
-    width: 100%;
-    gap: 1rem;
-    padding: 0 1rem;
+  .buttonsBanner {
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+    margin-top: 1rem;
   }
 
   .btn {
     width: 100%;
-    padding: 1rem;
     font-size: 0.9rem;
+  }
+
+  .buttonOne {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+
+  .buttonTwo {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.9rem;
   }
 
   .image-container {

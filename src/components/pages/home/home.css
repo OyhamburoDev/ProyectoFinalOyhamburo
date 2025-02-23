@@ -1,3 +1,8 @@
+.main-home {
+  height: 143rem;
+  background-color: #ffff;
+}
+
 .container-desc-promo {
   display: flex;
   flex-direction: row;
@@ -272,4 +277,11 @@
   color: #4a4a4a; /* Cambia el color del enlace */
   color: #000;
   font-size: 1rem;
+}
+
+/* Media query para móvil */
+@media (max-width: 480px) {
+  .main-home {
+    height: 205rem;
+  }
 }
