@@ -169,12 +169,34 @@
 }
 
 @media (max-width: 480px) {
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.7
+    ); /* Fondo más oscuro para mejor contraste */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(10px); /* Efecto de desenfoque del fondo */
+  }
   .modal-content {
-    width: 80%;
-    padding: 1.5rem;
-    background: rgba(0, 0, 0, 0.95); /* Fondo más opaco */
-    border: 1px solid rgba(255, 215, 0, 0.5); /* Borde más definido */
-    transform: none; /* Eliminar transformaciones */
-    backdrop-filter: none !important; /* Efecto vidrio */
+    background: rgba(0, 0, 0, 0.85);
+    padding: 2rem;
+    border-radius: 15px;
+    width: 320px;
+    backdrop-filter: none; /* Efecto vidrio */
+    border: 1px solid rgba(212, 175, 55, 0.3); /* Oro antiguo con transparencia */
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.15); /* Sombra dorada tenue */
+
+    transform: scale(0.9); /* Efecto de escala inicial para la animación */
+    animation: none;
   }
 }

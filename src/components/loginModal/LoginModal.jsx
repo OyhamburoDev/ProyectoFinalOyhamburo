@@ -11,6 +11,8 @@ const LoginModal = ({ show, onClose }) => {
   const [name, setName] = useState("");
   const [error, setError] = useState("");
 
+  const isMobile = /iPhone|iPad|ipod|Android/i.test(navigator.userAgent);
+
   const handleLogin = async () => {
     try {
       const authUser = await loginUser(email, password);
