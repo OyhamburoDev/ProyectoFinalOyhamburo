@@ -282,6 +282,6 @@
 /* Media query para móvil */
 @media (max-width: 480px) {
   .main-home {
-    height: 197rem;
+    height: 208rem;
   }
 }

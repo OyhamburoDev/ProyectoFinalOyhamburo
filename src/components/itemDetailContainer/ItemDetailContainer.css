@@ -34,6 +34,7 @@
 @media (max-width: 480px) {
   .cnt-item-detail-container {
     margin: 0;
+    margin-top: 4rem;
     height: auto; /* Altura completa de la pantalla */
     display: flex;
     justify-content: center; /* Centra horizontalmente */

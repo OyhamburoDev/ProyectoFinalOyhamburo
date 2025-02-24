@@ -7,7 +7,7 @@
 
 .banner-home {
   position: relative;
-  height: 75vh;
+  height: 80vh;
   background: url("../../../public/images/background-images.jpg") no-repeat
     center center/cover;
   display: flex;
@@ -32,6 +32,7 @@
   flex-direction: row;
   justify-content: center;
   gap: 5rem;
+  margin-top: 4rem;
 }
 
 .text-container {
@@ -113,7 +114,7 @@
 @media (max-width: 480px) {
   .banner-home {
     height: auto;
-    height: 40rem;
+    height: 45rem;
     padding: 1rem 1rem;
 
     background-position: 65% center;
@@ -123,6 +124,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    margin-top: 3rem;
   }
 
   .text-container {

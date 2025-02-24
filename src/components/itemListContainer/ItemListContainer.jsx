@@ -28,7 +28,16 @@ const ItemListContainer = () => {
       {productos.length > 0 ? (
         <ItemList productos={productos} />
       ) : (
-        <Box className="p-loading">
+        <Box
+          className="p-loading"
+          sx={{
+            position: "fixed",
+            width: "100%",
+            height: "100dvh",
+            backgroundColor: "rgba(255, 255, 255, 0.7)", // Fondo semitransparente
+            zIndex: 2000, // Mayor que el navbar (1000)
+          }}
+        >
           <CircularProgress size="6rem" color="inherit" />
         </Box>
       )}

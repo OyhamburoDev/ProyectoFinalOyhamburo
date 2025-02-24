@@ -12,7 +12,7 @@
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  z-index: 2000; /* Asegura que esté por encima de otros elementos */
 }
 
 .MuiCircularProgress-root {
@@ -26,5 +26,13 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* 📱 Pequeño (smartphones estándar) */
+@media (max-width: 480px) {
+  .cnt-item-list {
+    height: 100%;
+    margin-top: 6rem;
   }
 }

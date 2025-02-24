@@ -4,8 +4,10 @@
   align-items: center;
   height: 5rem;
   background-color: rgba(0, 0, 0, 0.7); /* Fondo con transparencia */
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
   backdrop-filter: blur(10px); /* Fondo desenfocado */
   padding: 0 2rem;
@@ -20,7 +22,7 @@
 /* 📱 Pequeño (smartphones estándar) */
 @media (max-width: 480px) {
   .navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
     height: 5rem;
     /* Fuerza el fondo para cubrir cualquier espacio */
@@ -31,6 +33,7 @@
     border: none; /* Elimina bordes */
     padding-left: 0.8rem;
     padding-right: 0.8rem;
+    display: flex;
   }
   .navbar-links.desktop-links {
     display: none !important;
@@ -39,7 +42,7 @@
   /* Muestra el menú móvil */
   .mobile-menu {
     display: flex;
-    position: sticky;
+    position: fixed;
     top: 5rem;
     margin-top: -1px; /* Elimina el espacio microscópico */
     background-color: rgba(0, 0, 0, 0.7);
