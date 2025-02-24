@@ -170,8 +170,11 @@
 
 @media (max-width: 480px) {
   .modal-content {
-    width: 80%; /* Ocupará el 90% del ancho de la pantalla */
-    max-width: 350px; /* Máximo ancho permitido */
-    padding: 1.5rem; /* Reducir padding en móvil */
+    width: 80%;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.95); /* Fondo más opaco */
+    border: 1px solid rgba(255, 215, 0, 0.5); /* Borde más definido */
+    transform: none; /* Eliminar transformaciones */
+    backdrop-filter: none !important; /* Efecto vidrio */
   }
 }
