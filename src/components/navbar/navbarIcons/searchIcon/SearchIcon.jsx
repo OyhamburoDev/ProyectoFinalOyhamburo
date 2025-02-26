@@ -1,9 +1,18 @@
 import React from "react";
 import "./searchIcon.css";
+import { useContext } from "react";
+import { SearchContext } from "../../../../context/SearchContext";
 
 const SearchIcon = () => {
+  const { isSearchOpen, setIsSearchOpen } = useContext(SearchContext);
+
+  const toggleSearch = () => {
+    setIsSearchOpen(!isSearchOpen);
+    console.log(isSearchOpen);
+  };
+
   return (
-    <div className="icon-buscar">
+    <div className="icon-buscar " onClick={toggleSearch}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

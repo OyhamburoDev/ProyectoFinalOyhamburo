@@ -37,7 +37,7 @@ export const getElegirUnProducto = async (id)=> {
   })).find(producto => producto.id === id)
 }
 
-// Función para obtener productos de Firestore
+// Función para obtener users de Firestore
 export const getUsers = async ()=> {
   const productsCollection = collection(db, 'users');
   const snapshot = await getDocs(productsCollection);
