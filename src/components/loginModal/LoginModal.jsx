@@ -18,7 +18,6 @@ const LoginModal = ({ show, onClose }) => {
   const handleLogin = async () => {
     try {
       const authUser = await loginUser(email, password);
-      console.log("AuthUser", authUser);
       const uid = authUser.uid;
       const firestoreUser = await getUserFromFirestore(uid);
       setUsuarioGuardado(firestoreUser);

@@ -4,13 +4,13 @@ import NavbarLinks from "../navbarLinks/NavbarLinks.jsx";
 import NavbarIcons from "../navbarIcons/NavbarIcons.jsx";
 import CartSidebar from "../../cart/CartContainer.jsx";
 
-function Navbar() {
+function Navbar({ openModal }) {
   return (
     <div className="navbar-container">
       <div className="navbar">
         <NavbarLogo />
         <NavbarLinks className="desktop-links" />
-        <NavbarIcons />
+        <NavbarIcons openModal={openModal} />
       </div>
 
       <CartSidebar />

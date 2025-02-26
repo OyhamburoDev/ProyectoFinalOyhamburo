@@ -7,12 +7,16 @@ import Typography from "@mui/material/Typography";
 import Badge from "@mui/material/Badge";
 import "./userIcon.css";
 
-const UserIcon = () => {
+const UserIcon = ({ openModal }) => {
   const { usuarioGuardado } = useContext(AuthContext);
   const [mostrarPoper, setMostrarPoper] = useState(true);
   const [anchorEl, setAnchorEl] = useState(null);
 
   const handleClick = (event) => {
+    if (!usuarioGuardado) {
+      openModal();
+      return;
+    }
     setAnchorEl(event.currentTarget);
   };
 

@@ -13,15 +13,16 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  const [showModal, setShowModal] = useState(true);
-  const closeModal = () => {
-    setShowModal(false);
-  };
+  const [showModal, setShowModal] = useState(null);
+
+  const closeModal = () => setShowModal(false);
+
+  const openModal = () => setShowModal(true);
 
   return (
     <Router>
       <LoginModal show={showModal} onClose={closeModal} />
-      <NavBar />
+      <NavBar openModal={openModal} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/categoria/:id" element={<ItemListContainer />} />
