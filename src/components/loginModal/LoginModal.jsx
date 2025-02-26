@@ -1,6 +1,10 @@
 import React, { useContext, useState } from "react";
 import "./LoginModal.css";
-import { registerUser, loginUser } from "../../services/firebase.js";
+import {
+  registerUser,
+  loginUser,
+  getUserFromFirestore,
+} from "../../services/firebase.js";
 import { AuthContext } from "../../context/AuthContext.jsx";
 
 const LoginModal = ({ show, onClose }) => {
@@ -14,11 +18,15 @@ const LoginModal = ({ show, onClose }) => {
   const handleLogin = async () => {
     try {
       const authUser = await loginUser(email, password);
-      const uid = authUser.id;
+      console.log("AuthUser", authUser);
+      const uid = authUser.uid;
       const firestoreUser = await getUserFromFirestore(uid);
       setUsuarioGuardado(firestoreUser);
+      onClose();
     } catch (error) {
-      console.error("Error en login:", error.message);
+      setError("");
+      console.error("Login error:", error);
+      setError("Error al iniciar sesión, verificar usuario o contraseña");
     }
   };
 
@@ -41,7 +49,11 @@ const LoginModal = ({ show, onClose }) => {
       await registerUser(email, password, name);
       onClose();
     } catch (error) {
-      setError(error.message || "Error al registrar usuario");
+      if (error.code === "auth/email-already-in-use") {
+        setError("El correo ya está en uso");
+      } else {
+        setError(error.message || "Error al registrar usuario");
+      }
     }
   };
 
@@ -81,7 +93,7 @@ const LoginModal = ({ show, onClose }) => {
           onChange={(e) => setPassword(e.target.value)}
           className="input-modal"
         />
-
+        {error && <p className="error-message">{error}</p>}
         {isLogin ? (
           <>
             <button className="button-modal" onClick={handleLogin}>
@@ -100,7 +112,6 @@ const LoginModal = ({ show, onClose }) => {
           </>
         ) : (
           <>
-            {error && <p className="error-message">{error}</p>}
             <button className="button-modal" onClick={handleRegister}>
               Sign Up
             </button>
