@@ -2,7 +2,7 @@ import React from "react";
 import "./CartTotal.css";
 import { Link } from "react-router-dom";
 
-const CartTotal = ({ total, carrito }) => {
+const CartTotal = ({ total, carrito, setIsCartOpen }) => {
   return (
     <>
       <div className="drawer-footer">
@@ -11,7 +11,11 @@ const CartTotal = ({ total, carrito }) => {
           <p className="p-price">$ {total.toFixed(2)}</p>
         </div>
         <Link to="/checkout">
-          <button className="button-pagar" disabled={carrito.length === 0}>
+          <button
+            className="button-pagar"
+            disabled={carrito.length === 0}
+            onClick={() => setIsCartOpen(false)}
+          >
             Finalizar compra
           </button>
         </Link>

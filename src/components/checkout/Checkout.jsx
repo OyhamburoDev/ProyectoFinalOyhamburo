@@ -156,7 +156,7 @@ const Checkout = () => {
         <div className="ticket-items">
           {carrito.map((producto) => (
             <div key={producto.item.id} className="ticket-item">
-              <p>
+              <p className="ticket-p">
                 {producto.item.title} x {producto.cantidad} - $
                 {producto.cantidad * producto.item.price}
               </p>

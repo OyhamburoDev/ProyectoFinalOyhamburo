@@ -116,9 +116,9 @@
   .cart-sidebar {
     position: fixed;
     top: 0;
-    width: 20rem;
+    width: 22rem;
     height: 100%;
-    background: rgba(255, 255, 255, 0.95); /* Transparencia ligera */
+    background: #fff; /* Transparencia ligera */
     backdrop-filter: none;
     transition: right 0.3s ease-in-out;
     box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.3);
@@ -128,5 +128,25 @@
     border-radius: 0;
     display: flex;
     flex-direction: column;
+  }
+
+  .cart-sidebar.open {
+    right: 0;
+  }
+
+  /* Fondo oscuro detrás del carrito */
+  .cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    display: none;
+  }
+
+  .cart-overlay.open {
+    display: block;
   }
 }

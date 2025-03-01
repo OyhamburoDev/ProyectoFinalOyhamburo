@@ -8,7 +8,6 @@ const SearchIcon = () => {
 
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
-    console.log(isSearchOpen);
   };
 
   return (

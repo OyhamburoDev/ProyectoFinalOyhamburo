@@ -182,16 +182,10 @@
     word-wrap: break-word;
   }
 
-  /* Corregir texto largo en productos */
-  .ticket-item p {
-    font-size: 0.8rem;
+  .ticket-p {
+    font-size: 1rem;
     line-height: 1.3;
     word-break: break-word;
-  }
-
-  /* Eliminar márgenes horizontales en contenedor padre */
-  body {
-    overflow-x: hidden;
   }
 
   /* Ajuste final para toast */

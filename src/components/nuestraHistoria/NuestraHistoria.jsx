@@ -21,9 +21,9 @@ const NuestraHistoria = () => {
             <span className="icono-flecha">→</span>
           </button>
         </div>
-        <div className="columna-imagen">
+        {/* <div className="columna-imagen">
           <div className="marco-imagen"></div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
