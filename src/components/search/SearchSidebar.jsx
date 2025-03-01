@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./SearchSidebar.css";
+import "./searchSidebar.css";
 import { useContext } from "react";
 import { SearchContext } from "../../context/SearchContext";
 import { getProductosFromFirestore } from "../../services/firebase";
