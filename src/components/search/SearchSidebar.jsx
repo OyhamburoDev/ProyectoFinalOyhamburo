@@ -116,7 +116,11 @@ const SearchSidebar = () => {
             <ul className="search-ul">
               {resultadoCategorias.map((cat, index) => (
                 <li key={index} className="search-li">
-                  <Link to={`/categoria/${cat.id}`} className="search-link">
+                  <Link
+                    to={`/categoria/${cat.id}`}
+                    className="search-link"
+                    onClick={() => setIsSearchOpen(false)}
+                  >
                     {cat.name}
                   </Link>
                 </li>
@@ -131,7 +135,11 @@ const SearchSidebar = () => {
             <ul className="search-ul">
               {resultadoProductos.map((prod, index) => (
                 <li key={index} className="search-li">
-                  <Link to={`/detalles/${prod.id}`} className="search-link">
+                  <Link
+                    to={`/detalles/${prod.id}`}
+                    className="search-link"
+                    onClick={() => setIsSearchOpen(false)}
+                  >
                     {prod.title}
                   </Link>
                 </li>
