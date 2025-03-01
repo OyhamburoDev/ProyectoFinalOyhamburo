@@ -1,5 +1,5 @@
 .appbar-background {
-  background-image: url("/images/background-images.jpg"); /* Asegúrate de que la ruta sea correcta */
+  background-image: url("/public/images/background-images.jpg"); /* Asegúrate de que la ruta sea correcta */
   background-size: cover;
   background-position: center;
 }

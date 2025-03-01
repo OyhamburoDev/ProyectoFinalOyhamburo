@@ -8,7 +8,8 @@
 .banner-home {
   position: relative;
   height: 80vh;
-  background: url("/images/background-images.jpg") no-repeat center center/cover;
+  background: url("/public/images/background-images.jpg") no-repeat center
+    center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
