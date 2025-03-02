@@ -53,6 +53,10 @@ const SearchSidebar = () => {
     }
   }, [pedidoDelUsuario]);
 
+  const handleGoHome = () => {
+    window.scrollTo(0, 0); // Desplazar al inicio de la página
+  };
+
   return (
     <>
       {/* Fondo oscuro detrás del sidebar */}
@@ -119,7 +123,10 @@ const SearchSidebar = () => {
                   <Link
                     to={`/categoria/${cat.id}`}
                     className="search-link"
-                    onClick={() => setIsSearchOpen(false)}
+                    onClick={() => {
+                      setIsSearchOpen(false);
+                      handleGoHome();
+                    }}
                   >
                     {cat.name}
                   </Link>
@@ -138,7 +145,10 @@ const SearchSidebar = () => {
                   <Link
                     to={`/detalles/${prod.id}`}
                     className="search-link"
-                    onClick={() => setIsSearchOpen(false)}
+                    onClick={() => {
+                      setIsSearchOpen(false);
+                      handleGoHome();
+                    }}
                   >
                     {prod.title}
                   </Link>
