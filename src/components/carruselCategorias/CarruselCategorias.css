@@ -1,175 +1,160 @@
+/* CarruselCategorias.css */
 .carrusel-luxury {
-  padding: 2rem 2rem;
-  padding-bottom: 6rem;
-
+  padding: 2rem 1rem;
+  padding-bottom: 1rem;
   background: var(--color-fondo);
 }
 
 .encabezado {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
 }
 
 .encabezado h2 {
   color: var(--tarjeta-oscura);
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
 }
 
 .encabezado p {
   color: #666;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 .contenedor-tarjetas {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative; /* Necesario para que ::before funcione */
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(85vw, 1fr);
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0 2rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Ocultar scrollbar */
+.contenedor-tarjetas::-webkit-scrollbar {
+  display: none;
+}
+.contenedor-tarjetas {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .tarjeta-categoria {
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
   position: relative;
-  width: 20rem;
-  height: 20rem;
+  height: 320px;
+  scroll-snap-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
   background-size: cover !important;
-  transition: transform 0.3s ease;
-  position: relative; /* Asegura que el z-index funcione */
-  z-index: 2; /* Mayor que el z-index de ::before */
+  background-position: center;
   display: flex;
-  align-items: end;
-  justify-content: center;
+  align-items: flex-end;
 }
 
-.tarjeta-categoria:hover {
-  transform: translateY(-5px);
+.tarjeta-categoria:active {
+  transform: scale(0.98);
 }
-.tarjeta-categoria::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 
-  z-index: 1; /* Coloca la capa por encima del fondo */
-  pointer-events: none; /* Permite interactuar con la tarjeta */
-  border-radius: 12px; /* Para que coincida con la tarjeta */
-}
 .contenido-tarjeta {
+  padding: 1.5rem;
+  color: white;
+  width: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
   position: relative;
   z-index: 2;
-  padding: 2rem;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-  width: 100%;
-}
-.contenido-tarjeta h3,
-.contenido-tarjeta p {
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  text-align: center;
 }
 
 .contenido-tarjeta h3 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-bottom: 0.5rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.3;
 }
 
 .contenido-tarjeta p {
   font-size: 0.95rem;
   opacity: 0.9;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  color: #ffe8a3;
+  line-height: 1.4;
 }
 
-.boton-vermas {
-  background: none;
-  border: none;
-  color: white;
-  font-weight: 500;
-  padding: 0.5rem 0;
-  cursor: pointer;
-  position: relative;
-  background-color: transparent !important; /* Elimina el fondo azul */
-  -webkit-tap-highlight-color: transparent;
-  display: inline-flex; /* Cambiamos a flex para mejor control */
-  flex-direction: column;
-  align-items: center;
-  padding: 0.5rem 1rem; /* Añade padding horizontal */
-}
-
-.linea-efecto {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--color-acento);
-  transition: width 0.3s ease;
-  left: 50%; /* Centramos horizontalmente */
-  transform: translateX(-50%); /* Ajuste fino de centrado */
-  width: 0;
-  transition: width 0.3s ease;
-}
-
-.boton-vermas:hover .linea-efecto {
+.cnt-bannerPromocional-btn {
   width: 100%;
 }
 
-.contenido-tarjeta p {
-  color: #f3cc4b;
+.boton-vermas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-decoration: none;
 }
 
-/* Media query para móvil */
-@media (max-width: 480px) {
+.boton-vermas:active {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(0.95);
+}
+
+.linea-efecto {
+  display: none;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
   .carrusel-luxury {
-    padding: 1rem 1rem 4rem;
-  }
-
-  .encabezado h2 {
-    font-size: 2rem;
-  }
-
-  .encabezado p {
-    font-size: 0.9rem;
+    padding: 2rem 2rem 6rem;
   }
 
   .contenedor-tarjetas {
-    flex-direction: column;
-    gap: 3rem;
-    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    padding: 0;
   }
 
   .tarjeta-categoria {
     width: 100%;
-    max-width: 300px;
-    height: 16rem;
+    height: 20rem;
+    max-width: none;
   }
 
-  .contenido-tarjeta {
-    padding: 1.5rem;
-  }
-
-  .contenido-tarjeta h3 {
-    font-size: 1.3rem;
-  }
-
-  .contenido-tarjeta p {
-    font-size: 0.85rem;
-    margin-bottom: 1rem;
+  .tarjeta-categoria:hover {
+    transform: translateY(-5px);
   }
 
   .boton-vermas {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
+    background: none;
+    backdrop-filter: none;
+    padding: 0.5rem 0;
+  }
+
+  .boton-vermas:hover .linea-efecto {
+    width: 100%;
+  }
+
+  .linea-efecto {
+    display: block;
   }
 }

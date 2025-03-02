@@ -1,143 +1,210 @@
+/* NuestraHistoria.css */
 .historia-luxury {
-  padding: 6rem 4rem;
+  padding: 2rem 1.5rem;
   background: var(--color-fondo);
-  padding-bottom: 7rem;
+  position: relative;
 }
 
 .contenedor-historia {
-  display: flex;
-  flex-direction: row;
-}
-.columna-textos {
-  width: 100vh;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center; /* Centra los elementos hijos */
-}
-.boton-saber-mas {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  text-align: center;
-  width: 35vh;
+  display: grid;
+  gap: 2rem;
 }
 
-.columna-imagen {
-  width: 100vh;
-  display: flex;
-  justify-content: center;
+.columna-textos-historia {
+  position: relative;
+  padding: 2rem 1.5rem;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.columna-textos h2 {
-  color: var(--tarjeta-oscura);
-  font-size: 2.8rem;
+.columna-textos-historia::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 228, 163, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(255, 228, 163, 0.05) 100%
+  );
+  z-index: 0;
+}
+
+.columna-textos-historia h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #1a1a1a;
+  line-height: 1.1;
+  position: relative;
+  z-index: 1;
+}
+
+.historia-p-destacado {
+  font-size: 1.1rem;
+  color: #404040;
+  font-weight: 500;
   margin-bottom: 1.5rem;
+  line-height: 1.4;
+  position: relative;
+  padding-left: 1.5rem;
+  z-index: 1;
 }
 
-.destacado {
-  color: var(--color-acento);
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+.historia-p-destacado::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80%;
+  width: 3px;
+  background: var(--color-acento);
+  border-radius: 2px;
 }
 
-.linea-separadora {
-  width: 100px;
-  height: 2px;
-  background: var(--color-bordes);
+.linea-separadora-historia {
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.4);
   margin: 2rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.descripcion {
-  color: #666;
-  line-height: 1.8;
+.historia-p-descripcion {
+  font-size: 0.95rem;
+  color: #4a4a4a;
+  line-height: 1.6;
   margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
-.boton-saber-mas {
-  background: none;
-  border: 2px solid var(--tarjeta-oscura);
-  color: var(--tarjeta-oscura);
-  padding: 1rem 2rem;
-  border-radius: 30px;
+.boton-historia {
+  background: #1a1a1a;
+  border: none;
+  color: white !important;
+  padding: 1.2rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  transition: all 0.3s ease;
-}
-
-.boton-saber-mas:hover {
-  background: var(--tarjeta-oscura);
-  color: white;
-}
-
-.marco-imagen {
-  height: 30rem;
-  width: 30rem;
-  background: url("/images/cookie-enviosUno.jpg") center/cover;
-  border-radius: 8px;
+  width: 80%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   position: relative;
-  box-shadow: 15px 15px 0 var(--color-acento);
+  z-index: 1;
+  text-decoration: none;
 }
-/* Media query para móvil */
-@media (max-width: 480px) {
+
+.icono-flecha {
+  font-weight: 400;
+  transition: transform 0.3s ease;
+}
+
+.boton-historia:active {
+  transform: scale(0.98);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.boton-historia:active .icono-flecha {
+  transform: translateX(3px);
+}
+
+/* Animaciones mejoradas */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.columna-textos-historia > * {
+  animation: fadeIn 0.6s ease backwards;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
   .historia-luxury {
-    padding: 3rem 1.5rem;
-    padding-bottom: 5rem;
-    height: auto;
+    padding: 4rem 2rem;
   }
 
   .contenedor-historia {
-    flex-direction: column;
-    gap: 3rem;
-  }
-
-  .columna-textos,
-  .columna-imagen {
-    width: 100%;
-  }
-
-  .columna-textos h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  .destacado {
-    font-size: 1rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .linea-separadora {
-    margin: 1.5rem 0;
-    width: 60px;
-  }
-
-  .descripcion {
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-
-  .boton-saber-mas {
-    width: 100%;
-    max-width: 300px;
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
-    justify-content: center;
-  }
-
-  .marco-imagen {
-    height: 20rem;
-    width: 100%;
-    max-width: 300px;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
     margin: 0 auto;
-    box-shadow: 8px 8px 0 var(--color-acento);
   }
 
-  .icono-flecha {
-    margin-left: 0.5rem;
+  .columna-textos-historia {
+    padding: 3rem;
+  }
+
+  .marco-imagen-historia {
+    box-shadow: 12px 12px 0 var(--color-acento);
+  }
+}
+/* Desktop */
+@media (min-width: 768px) {
+  .historia-luxury {
+    padding: 6rem 2rem;
+  }
+
+  .contenedor-historia {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    max-width: 1280px;
+    align-items: center;
+  }
+
+  .columna-textos-historia {
+    padding: 3rem 2rem;
+    background: #fff;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.03);
+    order: 1;
+  }
+
+  .columna-imagen-historia {
+    display: block !important; /* Forzar visualización */
+    order: 2;
+    height: 500px;
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    transform: translateZ(0);
+  }
+
+  .marco-imagen-historia {
+    height: 100%;
+    width: 100%;
+    background: url("/images/cookie-enviosUno.jpg") center/cover;
+    border-radius: 24px;
+    box-shadow: 16px 16px 0 var(--color-acento);
+    transition: transform 0.3s ease;
+  }
+
+  .columna-imagen-historia:hover .marco-imagen-historia {
+    transform: translate(-8px, -8px);
+  }
+
+  /* Ajustes tipografía desktop */
+  .columna-textos-historia h2 {
+    font-size: 3rem;
+  }
+
+  .historia-p-destacado {
+    font-size: 1.25rem;
+  }
+
+  .historia-p-descripcion {
+    font-size: 1.05rem;
   }
 }

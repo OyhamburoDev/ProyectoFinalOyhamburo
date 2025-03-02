@@ -23,12 +23,12 @@ const BannerHome = () => {
           {/* Botones con efecto hover */}
           <div className="buttonsBanner">
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <Link to="/coleccion" className="btn primary buttonOne">
+              <Link to="/en-construccion" className="btn primary buttonOne">
                 Explorar
               </Link>
             </motion.div>
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-              <Link to="/nosotros" className="btn secondary buttonTwo">
+              <Link to="/en-construccion" className="btn secondary buttonTwo">
                 Conócenos
               </Link>
             </motion.div>

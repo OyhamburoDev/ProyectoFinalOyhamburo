@@ -1,0 +1,15 @@
+.cnt-underConstruction {
+  text-align: center;
+  padding: 50px;
+}
+
+@media (max-width: 480px) {
+  .cnt-underConstruction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    margin-top: 2rem;
+    height: 25rem;
+  }
+}

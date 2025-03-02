@@ -68,7 +68,7 @@ const Footer = () => {
                 type="email"
                 id="intro-email"
                 placeholder="Ingresa tu correo electrónico aquí →"
-                className="input-uno"
+                className="input-footer-uno"
                 onChange={handleEmailChange}
               />
               <div className="footer-checkbox-label">
@@ -134,36 +134,38 @@ const Footer = () => {
       </footer>
       {/* ICONOS */}
       <div className="footer-iconos">
-        <div className="footer-icon-bank">
-          <img
-            src={fotoIconoMasterCard}
-            alt="icono-instagram"
-            className="footer-icon-uno"
-          />
-          <img
-            src={fotoIconoMercadoPago}
-            alt="icono-Meta"
-            className="footer-icon-uno"
-          />
-          <img
-            src={fotoIconoVisa}
-            alt="icono-linkedin"
-            className="footer-icon-uno"
-          />
-        </div>
-        <div className="footer-container-icon">
-          {" "}
-          <img
-            src={fotoIconoInstagram}
-            alt="icono-instagram"
-            className="footer-icon"
-          />
-          <img src={fotoIconoMeta} alt="icono-Meta" className="footer-icon" />
-          <img
-            src={fotoIconoLinkedin}
-            alt="icono-linkedin"
-            className="footer-icon"
-          />
+        <div className="footer-cnt-bank-socialmedia">
+          <div className="footer-icon-bank">
+            <img
+              src={fotoIconoMasterCard}
+              alt="icono-instagram"
+              className="footer-icon-uno"
+            />
+            <img
+              src={fotoIconoMercadoPago}
+              alt="icono-Meta"
+              className="footer-icon-uno"
+            />
+            <img
+              src={fotoIconoVisa}
+              alt="icono-linkedin"
+              className="footer-icon-uno"
+            />
+          </div>
+          <div className="footer-container-icon">
+            {" "}
+            <img
+              src={fotoIconoInstagram}
+              alt="icono-instagram"
+              className="footer-icon"
+            />
+            <img src={fotoIconoMeta} alt="icono-Meta" className="footer-icon" />
+            <img
+              src={fotoIconoLinkedin}
+              alt="icono-linkedin"
+              className="footer-icon"
+            />
+          </div>
         </div>
         <div className="footer-btn-container">
           <Link to="/" onClick={handleGoHome}>
