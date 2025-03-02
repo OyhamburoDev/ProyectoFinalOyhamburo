@@ -11,8 +11,8 @@ const CartItem = ({ item, cantidad }) => {
     eliminarProducto(item);
     toast.error(`${item.title} eliminado del carrito`, {
       className: "toast-custom",
-      position: "bottom-right",
-      autoClose: 2000,
+      position: "top-center",
+      autoClose: 500,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,

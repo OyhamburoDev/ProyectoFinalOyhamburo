@@ -68,3 +68,14 @@
   justify-content: center;
   padding-bottom: 1.5rem;
 }
+
+@media (max-width: 480px) {
+  .toast-custom {
+    width: 80% !important;
+
+    padding: 15px !important; /* Espaciado interno */
+    margin: 0 auto !important; /* Centrado adicional */
+    font-size: 14px !important; /* Tamaño de texto */
+    margin-top: 4rem !important;
+  }
+}

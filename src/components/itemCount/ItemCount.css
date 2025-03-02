@@ -27,11 +27,10 @@
 
   .toast-custom {
     width: 80% !important;
-    bottom: 20px !important; /* Distancia desde abajo */
 
     padding: 15px !important; /* Espaciado interno */
     margin: 0 auto !important; /* Centrado adicional */
     font-size: 14px !important; /* Tamaño de texto */
-    margin-top: 0.5rem !important;
+    margin-top: 4rem !important;
   }
 }

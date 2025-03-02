@@ -23,8 +23,8 @@ const ItemCount = ({ detalles }) => {
     agregarAlCarrito(detalles, cantidad);
     toast.success(`${detalles.title} agregado al carrito!`, {
       className: "toast-custom",
-      position: "bottom-right",
-      autoClose: 2000,
+      position: "top-center",
+      autoClose: 500,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
