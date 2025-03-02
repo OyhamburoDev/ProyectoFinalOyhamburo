@@ -19,7 +19,7 @@ const CarruselCategorias = () => {
       imagen: "url('/images/cookie-coconut.jpg')",
     },
     {
-      titulo: "Clásicas Premium",
+      titulo: "Colección Premium",
       id: 3,
       subtitulo: "Reinvención de sabores tradicionales",
       colorFondo: "#FAFAFA",
