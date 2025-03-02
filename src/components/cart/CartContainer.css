@@ -116,7 +116,7 @@
   .cart-sidebar {
     position: fixed;
     top: 0;
-    width: 22rem;
+    width: 20rem;
     height: 100%;
     background: #fff; /* Transparencia ligera */
     backdrop-filter: none;
