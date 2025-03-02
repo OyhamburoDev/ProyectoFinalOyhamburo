@@ -32,6 +32,7 @@ const CarruselCategorias = () => {
       <div className="encabezado">
         <h2>Colecciones Destacadas</h2>
         <p>Descubre nuestras creaciones más celebradas</p>
+        <div className="scroll-hint-mobile">← Desliza para ver más →</div>
       </div>
 
       <div className="contenedor-tarjetas">
