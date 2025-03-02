@@ -1,5 +1,5 @@
 import React from "react";
-import "./UnderConstruction.css";
+import "./underConstruction.css";
 
 const UnderConstruction = () => {
   return (
