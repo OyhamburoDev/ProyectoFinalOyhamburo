@@ -122,3 +122,33 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 768px) {
+  .banner-promo {
+    padding: 2rem 1rem;
+  }
+
+  .bannerP-contenedor-motion {
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+  }
+
+  .bannerP-titulo {
+    font-size: 2rem;
+  }
+
+  .bannerP-descripcion {
+    font-size: 1rem;
+  }
+
+  .cnt-bannerPromocional-btn {
+    display: flex;
+    width: auto;
+    margin-top: 1rem;
+  }
+
+  .banner-boton {
+    padding: 1rem 2rem;
+    justify-content: center;
+  }
+}

@@ -54,3 +54,34 @@
     color: #e38035;
   }
 }
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    display: flex;
+    justify-content: start;
+    width: 50%;
+    padding-left: 1rem;
+  }
+
+  .navbar-title {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    margin-left: 0px;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+  }
+  .navbar-subtitle {
+    font-size: 0.9rem;
+    color: #e38035;
+    margin-left: 5px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+  }
+  .navbar-crown {
+    font-size: 1.5rem;
+    color: #e38035;
+  }
+}

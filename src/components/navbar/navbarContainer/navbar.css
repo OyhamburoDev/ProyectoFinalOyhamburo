@@ -51,3 +51,37 @@
     box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.7); /* Línea superior sutil */
   }
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    height: 5rem;
+    /* Fuerza el fondo para cubrir cualquier espacio */
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    margin: 0;
+    border: none; /* Elimina bordes */
+
+    display: flex;
+  }
+  .navbar-links.desktop-links {
+    display: none !important;
+  }
+
+  /* Muestra el menú móvil */
+  .mobile-menu {
+    display: flex;
+    position: fixed;
+    top: 5rem;
+    margin-top: -1px; /* Elimina el espacio microscópico */
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    padding: 0.8rem 0;
+    z-index: 999;
+    /* Añade esto para cubrir completamente el espacio: */
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.7); /* Línea superior sutil */
+  }
+}

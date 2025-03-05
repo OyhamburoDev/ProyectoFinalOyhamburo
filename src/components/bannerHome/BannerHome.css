@@ -190,3 +190,83 @@
     backdrop-filter: blur(3px);
   }
 }
+
+@media (max-width: 768px) {
+  .banner-home {
+    height: auto;
+    height: 45rem;
+    padding: 1rem 1rem;
+
+    background-position: 65% center;
+  }
+
+  .banner-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .text-container {
+    width: 100%;
+    order: 2;
+  }
+
+  .banner-home-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .banner-home-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .buttonsBanner {
+    display: flex;
+    flex-direction: row;
+    gap: 0.4rem;
+    margin-top: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .buttonOne {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+
+  .buttonTwo {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.9rem;
+  }
+
+  .image-container {
+    width: 100%;
+    order: 1;
+  }
+
+  .image-frame {
+    width: 12rem;
+    height: 12rem;
+    margin: 0 auto;
+  }
+
+  .image-frame img {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  /* Ajustes de overlay para mejor legibilidad */
+  .overlay {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(3px);
+  }
+}

@@ -5,7 +5,7 @@
   color: white;
 }
 
-@media (min-width: 481px) {
+@media (min-width: 768px) {
   .icon-hamburger {
     display: none;
   }

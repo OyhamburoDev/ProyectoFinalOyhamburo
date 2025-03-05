@@ -1,4 +1,3 @@
-/* CarruselCategorias.css */
 .carrusel-luxury {
   padding: 2rem 1rem;
   padding-bottom: 1rem;
@@ -133,7 +132,7 @@
 
   .contenedor-tarjetas {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -147,9 +146,6 @@
   }
 
   .tarjeta-categoria {
-    width: 100%;
-    height: 20rem;
-    max-width: none;
   }
 
   .tarjeta-categoria:hover {
@@ -157,25 +153,33 @@
   }
 
   .boton-vermas {
-    background: none;
-    backdrop-filter: none;
-    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    text-decoration: none;
   }
 
-  .boton-vermas:hover .linea-efecto {
-    width: 100%;
+  .boton-vermas:active {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(0.95);
   }
 
-  .linea-efecto {
-    display: block;
-  }
-}
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 1;
+    }
   }
 }

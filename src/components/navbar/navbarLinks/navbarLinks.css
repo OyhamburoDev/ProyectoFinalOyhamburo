@@ -43,3 +43,23 @@
     color: #e38035;
   }
 }
+
+@media (max-width: 768px) {
+  .navbar-list {
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .navbar-list li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-list li a:hover {
+    color: #e38035;
+  }
+}

@@ -189,3 +189,311 @@
     background-color: #e4dcdc;
   }
 }
+
+@media (max-width: 768px) {
+  .search-sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999; /* Ajusta si es necesario */
+    display: flex;
+  }
+
+  /* Cuando el sidebar está abierto */
+  .search-sidebar.open {
+    right: 0;
+  }
+
+  /* Fondo oscuro cuando el sidebar está abierto */
+  .search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece el fondo */
+    z-index: 9998;
+    display: none;
+  }
+
+  /* Mostrar overlay solo cuando el sidebar está abierto */
+  .search-overlay.open {
+    display: block;
+  }
+
+  .cnt-logo-close {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+    height: auto;
+  }
+
+  .cnt-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .cnt-close {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .search-title {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-bottom: 0.2rem;
+    margin-top: 0.8rem;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+  }
+
+  .search-subtitle {
+    font-size: 0.8rem;
+    color: #e38035;
+    margin-left: 0.2rem;
+    margin-bottom: 0.2rem;
+    margin-top: 0.8rem;
+    text-transform: uppercase;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search-crown {
+    font-size: 1.4rem;
+    color: #e38035;
+  }
+
+  .cnt-search-close {
+    margin-top: 1rem;
+  }
+
+  .cnt-search-input {
+    display: flex;
+    flex-direction: row;
+    width: 93%;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 0.2rem;
+  }
+
+  .search-input {
+    width: 93%;
+    height: 2rem;
+    border: 1px solid #e38035;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    display: flex;
+    text-align: start;
+  }
+
+  .cnt-search-results {
+    display: flex;
+    flex-direction: column;
+    align-items: safe start;
+    width: 93%;
+    margin-left: 0.5rem;
+    max-height: 60vh; /* Máximo hasta la mitad de la pantalla */
+    overflow-y: auto; /* Muestra un scroll si hay mucho contenido */
+    padding-top: 0.5rem;
+  }
+
+  .search-ul {
+    list-style: none; /* Quita los círculos o viñetas */
+    padding: 0;
+    margin: 0;
+  }
+
+  .search-li {
+    margin-bottom: 10px; /* Espaciado entre elementos */
+    position: relative; /* Para que el pseudo-elemento sea relativo a cada <li> */
+    width: 85vw; /* Ocupará todo el ancho visible de la pantalla */
+  }
+
+  .search-link {
+    display: flex; /* Asegura que el enlace se estire */
+    width: 100%; /* Hace que el enlace ocupe todo el ancho del <li> */
+    text-decoration: none; /* Quita el subrayado */
+    color: black; /* Color inicial del texto */
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: all 0.3s ease-in-out; /* Transición suave */
+  }
+  .search-link:hover {
+    background-color: #ece3e3; /* Fondo gris al pasar el mouse */
+    color: #ff9900;
+  }
+
+  .search-link:active {
+    transform: scale(0.95);
+    background-color: #e4dcdc;
+  }
+}
+
+@media (max-width: 1440px) {
+  .search-sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999; /* Ajusta si es necesario */
+    display: flex;
+  }
+
+  /* Cuando el sidebar está abierto */
+  .search-sidebar.open {
+    right: 0;
+  }
+
+  /* Fondo oscuro cuando el sidebar está abierto */
+  .search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece el fondo */
+    z-index: 9998;
+    display: none;
+  }
+
+  /* Mostrar overlay solo cuando el sidebar está abierto */
+  .search-overlay.open {
+    display: block;
+  }
+
+  .cnt-logo-close {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+    height: auto;
+  }
+
+  .cnt-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .cnt-close {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .search-title {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-bottom: 0.2rem;
+    margin-top: 0.8rem;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+  }
+
+  .search-subtitle {
+    font-size: 0.8rem;
+    color: #e38035;
+    margin-left: 0.2rem;
+    margin-bottom: 0.2rem;
+    margin-top: 0.8rem;
+    text-transform: uppercase;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search-crown {
+    font-size: 1.4rem;
+    color: #e38035;
+  }
+
+  .cnt-search-close {
+    margin-top: 1rem;
+  }
+
+  .cnt-search-input {
+    display: flex;
+    flex-direction: row;
+    width: 93%;
+    align-items: center;
+    align-content: center;
+    padding-bottom: 0.2rem;
+  }
+
+  .search-input {
+    width: 93%;
+    height: 2rem;
+    border: 1px solid #e38035;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    display: flex;
+    text-align: start;
+  }
+
+  .cnt-search-results {
+    display: flex;
+    flex-direction: column;
+    align-items: safe start;
+    width: 93%;
+    margin-left: 0.5rem;
+    max-height: 60vh; /* Máximo hasta la mitad de la pantalla */
+    overflow-y: auto; /* Muestra un scroll si hay mucho contenido */
+    padding-top: 0.5rem;
+  }
+
+  .search-ul {
+    list-style: none; /* Quita los círculos o viñetas */
+    padding: 0;
+    margin: 0;
+  }
+
+  .search-li {
+    margin-bottom: 10px; /* Espaciado entre elementos */
+    position: relative; /* Para que el pseudo-elemento sea relativo a cada <li> */
+    width: 85vw; /* Ocupará todo el ancho visible de la pantalla */
+  }
+
+  .search-link {
+    display: flex; /* Asegura que el enlace se estire */
+    width: 100%; /* Hace que el enlace ocupe todo el ancho del <li> */
+    text-decoration: none; /* Quita el subrayado */
+    color: black; /* Color inicial del texto */
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: all 0.3s ease-in-out; /* Transición suave */
+  }
+  .search-link:hover {
+    background-color: #ece3e3; /* Fondo gris al pasar el mouse */
+    color: #ff9900;
+  }
+
+  .search-link:active {
+    transform: scale(0.95);
+    background-color: #e4dcdc;
+  }
+}
