@@ -14,8 +14,10 @@ E-commerce de galletas premium desarrollado con React.js y Firebase. Los usuario
 
 🚀 **Demo**: [https://cookies-premium.vercel.app/](https://cookies-premium.vercel.app/)
 
-![Demo de la app](https://raw.githubusercontent.com/OyhamburoDev/ProyectoFinalOyhamburo/main/gif-redme.gif)
+![Demo de la app](https://raw.githubusercontent.com/OyhamburoDev/ProyectoFinalOyhamburo/main/video/gif-redme.gif)
 ![Demo de la app](https://raw.githubusercontent.com/OyhamburoDev/ProyectoFinalOyhamburo/main/video/gif-movile-grande.gif)
+![Demo de la app](https://raw.githubusercontent.com/OyhamburoDev/ProyectoFinalOyhamburo/main/video/gif-movile-pequeno-cuadrado.gif)
+![Demo de la app](https://raw.githubusercontent.com/OyhamburoDev/ProyectoFinalOyhamburo/main/video/gif-movile-pequeño-horizontal.gif)
 
 ## 🛠️ Tech Stack
 - **Frontend**: React.js + Vite ⚡
