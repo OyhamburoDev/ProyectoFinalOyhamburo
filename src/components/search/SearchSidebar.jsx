@@ -14,10 +14,10 @@ const ArrayCategorias = [
 
 const SearchSidebar = () => {
   const { isSearchOpen, setIsSearchOpen } = useContext(SearchContext);
-  const [pedidoDelUsuario, setPedidoDelUsuario] = useState(""); // aqui guarda la info del input
+  const [pedidoDelUsuario, setPedidoDelUsuario] = useState("");
   const [estado, setEstado] = useState(false);
-  const [resultadoProductos, setResultadoProductos] = useState([]); // aqui traemos los productos
-  const [resultadoCategorias, setResultadoCategorias] = useState([]); // aqui traemos las categorias
+  const [resultadoProductos, setResultadoProductos] = useState([]);
+  const [resultadoCategorias, setResultadoCategorias] = useState([]);
 
   const handleChange = (e) => {
     setPedidoDelUsuario(e.target.value);
